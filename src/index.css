@@ -1,13 +1,106 @@
+@import url("https://fonts.cdnfonts.com/css/gotham-6");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Color palette
+#F8F6F4 background offwhite
+
+#604c53 text drak gray
+*/
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0px;
+  padding: 0px;
+  background-color: #f8f6f4;
+  color: black;
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
+}
+input {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 12px;
+  vertical-align: baseline;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.16px;
+  border-radius: 0;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #8d8d8d;
+  background-color: #f4f4f4;
+  padding: 0 16px;
+
+  color: #161616;
+  transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9),
+    outline 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  overflow: visible;
+}
+input:focus {
+  outline: 2px solid #0f62fe;
+  outline-offset: -2px;
+  overflow: visible;
+}
+::placeholder {
+  text-align: left;
+  overflow: visible;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*navbar */
+.navbar {
+  -webkit-box-shadow: 10px 9px 35px -18px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 10px 9px 35px -18px rgba(0, 0, 0, 0.16);
+  box-shadow: 10px 9px 35px -18px rgba(0, 0, 0, 0.16);
+}
+/*Homepage */
+.get-started-btn {
+  -webkit-box-shadow: 5px 5px 43px -18px rgba(0, 0, 0, 0.88);
+  -moz-box-shadow: 5px 5px 43px -18px rgba(0, 0, 0, 0.88);
+  box-shadow: 5px 5px 43px -18px rgba(0, 0, 0, 0.88);
+  border: 1px solid rgb(0, 0, 0, 0.07);
+}
+
+/*Role selection */
+.role-container {
+  background-color: white;
+  -webkit-box-shadow: 3px 3px 21px -7px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 3px 3px 21px -7px rgba(0, 0, 0, 0.35);
+  box-shadow: 3px 3px 21px -7px rgba(0, 0, 0, 0.35);
+  border-radius: 16px;
+}
+
+/*Manufacturer */
+.issue-invoice-container {
+  padding: 16px;
+  background-color: white;
+  border-radius: 16px;
+}
+
+.issue-invoice-btn {
+  padding: 8px 16px;
+  background-color: black;
+  color: white;
+  border-radius: 16px;
+}
+
+/*Mobile Hamburger */
+.mobile-hamburger-display {
+  height: 100dvh;
+  width: 100dvw;
+}
+
+.customers-dropdown-container-inactive,
+.manufacturers-dropdown-container-inactive,
+.warehouses-dropdown-container-inactive {
+  display: none;
+}
+
+.customers-dropdown-container-active,
+.manufacturers-dropdown-container-active,
+.warehouses-dropdown-container-active {
+  display: block;
 }
