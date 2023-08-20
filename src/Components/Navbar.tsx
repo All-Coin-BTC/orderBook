@@ -30,6 +30,7 @@ export const Navbar = ({
             className="w-8 h-8"
             src={`${displayMobileMenu ? "/close.png" : "/more.png"}`}
             onClick={() => setDisplayMobileMenu(!displayMobileMenu)}
+            alt=""
           />
         </div>
       </div>
@@ -40,7 +41,7 @@ export const Navbar = ({
             onClick={() => setDisplayCustomersLinks(!displayCustomersLinks)}
           >
             <p>Customers</p>
-            <img className="w-4 h-4" src="/down-arrow.png" />
+            <img className="w-4 h-4" src="/down-arrow.png" alt="" />
           </div>
           <div
             className={`${
@@ -60,7 +61,7 @@ export const Navbar = ({
             }
           >
             <p>Manufacturers</p>
-            <img className="w-4 h-4" src="/down-arrow.png" />
+            <img className="w-4 h-4" src="/down-arrow.png" alt="" />
           </div>
           <div
             className={`${
@@ -78,7 +79,7 @@ export const Navbar = ({
             onClick={() => setDisplayWarehousesLinks(!displayWarehousesLinks)}
           >
             <p>Warehouses</p>
-            <img className="w-4 h-4" src="/down-arrow.png" />
+            <img className="w-4 h-4" src="/down-arrow.png" alt="" />
           </div>
           <div
             className={`${
@@ -93,7 +94,7 @@ export const Navbar = ({
           </div>
           <div className="customers-hamburger-item text-xl font-light mt-6 flex items-center gap-3">
             <p>Logistics</p>
-            <img className="w-4 h-4" src="/down-arrow.png" />
+            <img className="w-4 h-4" src="/down-arrow.png" alt="" />
           </div>
         </div>
       )}
