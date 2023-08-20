@@ -18,10 +18,10 @@ export const Navbar = ({
     <>
       <div className="navbar px-4 py-4 flex justify-between bg-white mb-8">
         <div className="navbar-left flex items-center">
-          <Link to="/">
-            <img className="w-8 h-8" src="/auction.png" />
+          <Link to="/" onClick={() => setDisplayMobileMenu(false)}>
+            <img className="w-8 h-8" src="/auction.png" alt="" />
           </Link>
-          <Link to="/">
+          <Link to="/" onClick={() => setDisplayMobileMenu(false)}>
             <div className="logo-text">OrderBook</div>
           </Link>
         </div>
@@ -38,7 +38,7 @@ export const Navbar = ({
         <div className="mobile-hamburger-display w-screen h-screen flex flex-col items-center">
           <div
             className="customers-hamburger-item text-xl font-light mt-6 flex items-center gap-3 cursor-pointer"
-            onClick={() => setDisplayCustomersLinks(!displayCustomersLinks)}
+            onClick={() => setDisplayCustomersLinks(false)}
           >
             <p>Customers</p>
             <img className="w-4 h-4" src="/down-arrow.png" alt="" />
@@ -70,7 +70,12 @@ export const Navbar = ({
                 : "manufacturers-dropdown-container-inactive"
             }`}
           >
-            <p>Create Invoice</p>
+            <Link
+              to="/manufacturer-hub"
+              onClick={() => setDisplayMobileMenu(!displayMobileMenu)}
+            >
+              <p>Create Invoice</p>
+            </Link>
             <p>Invoice History</p>
             <p>Outstanding Invoices</p>
           </div>
