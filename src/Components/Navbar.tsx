@@ -14,6 +14,8 @@ export const Navbar = ({
     useState<boolean>(false);
   const [displayWarehousesLinks, setDisplayWarehousesLinks] =
     useState<boolean>(false);
+  const [displayLogisticsLinks, setDisplayLogisticsLink] =
+    useState<boolean>(false);
   return (
     <>
       <div className="navbar px-4 py-4 flex justify-between bg-white mb-8">
@@ -38,7 +40,7 @@ export const Navbar = ({
         <div className="mobile-hamburger-display w-screen h-screen flex flex-col items-center">
           <div
             className="customers-hamburger-item text-xl font-light mt-6 flex items-center gap-3 cursor-pointer"
-            onClick={() => setDisplayCustomersLinks(false)}
+            onClick={() => setDisplayCustomersLinks(!displayCustomersLinks)}
           >
             <p>Customers</p>
             <img className="w-4 h-4" src="/down-arrow.png" alt="" />
@@ -97,9 +99,23 @@ export const Navbar = ({
             <p>Sales History</p>
             <p>Open Orders</p>
           </div>
-          <div className="customers-hamburger-item text-xl font-light mt-6 flex items-center gap-3">
+          <div
+            className="logistics-hamburger-item text-xl font-light mt-6 flex items-center gap-3 cursor-pointer"
+            onClick={() => setDisplayLogisticsLink(!displayLogisticsLinks)}
+          >
             <p>Logistics</p>
             <img className="w-4 h-4" src="/down-arrow.png" alt="" />
+          </div>
+          <div
+            className={`${
+              displayLogisticsLinks
+                ? "warehouses-dropdown-container-active text-center font-light text-grayText"
+                : "warehouses-dropdown-container-inactive"
+            }`}
+          >
+            <p>Example</p>
+            <p>Two</p>
+            <p>Dummy3</p>
           </div>
         </div>
       )}

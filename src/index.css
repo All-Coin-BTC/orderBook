@@ -95,12 +95,14 @@ input:focus {
 
 .customers-dropdown-container-inactive,
 .manufacturers-dropdown-container-inactive,
-.warehouses-dropdown-container-inactive {
+.warehouses-dropdown-container-inactive,
+.logistics-dropdown-container-inactive {
   display: none;
 }
 
 .customers-dropdown-container-active,
 .manufacturers-dropdown-container-active,
-.warehouses-dropdown-container-active {
+.warehouses-dropdown-container-active,
+.logistics-dropdown-container-active {
   display: block;
 }
