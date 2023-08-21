@@ -36,8 +36,7 @@ input {
   padding: 0 16px;
 
   color: #161616;
-  transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9),
-    outline 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9), outline 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
   overflow: visible;
 }
 input:focus {
@@ -86,7 +85,59 @@ input:focus {
   color: white;
   border-radius: 16px;
 }
+.generate-request-container,
+.view-requests-container {
+  max-width: 320px;
+  background: white;
+  -webkit-box-shadow: 3px 3px 21px -7px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 3px 3px 21px -7px rgba(0, 0, 0, 0.35);
+  box-shadow: 3px 3px 21px -7px rgba(0, 0, 0, 0.35);
+}
 
+/*Manufacturer Generate Invoice Pages*/
+.enter-warehouse-details-container,
+.enter-manufacture-details-container,
+.enter-logistics-details-container,
+.review-details-container {
+  background-color: white;
+  max-width: 400px;
+}
+.warehouse-input,
+.manufacture-input,
+.logistics-input {
+  color: rgba(0, 0, 0, 0.87);
+  border-bottom-color: rgba(0, 0, 0, 0.42);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.009375em;
+  text-decoration: inherit;
+  text-transform: inherit;
+  align-self: flex-end;
+  box-sizing: border-box;
+  width: auto;
+  padding: 20px 16px 6px;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 4px 4px 0 0;
+  background: rgb(245, 245, 245);
+  height: auto;
+}
+.warehouse-input:hover,
+.manufacture-input:hover,
+.logistics-input:hover {
+  border-bottom-color: rgba(0, 0, 0, 0.87);
+  background: #ececec;
+}
+.warehouse-input:focus,
+.manufacture-input:focus,
+.logistics-input:focus {
+  border-color: #6200ee;
+}
+.warehouse-submit-btn,
+.manufacture-submit-btn {
+  background-color: rgb(157, 252, 255);
+}
 /*Mobile Hamburger */
 .mobile-hamburger-display {
   height: 100dvh;

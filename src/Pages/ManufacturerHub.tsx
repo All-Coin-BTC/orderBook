@@ -1,50 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ManufacturerHub() {
   return (
     <div className="manufacturer-hub-container flex flex-col items-center">
       <div className="manufacturer-title mt-8">
         <p className="text-3xl text-center ">Welcome to the Manufacturer Hub</p>
+        <p className="text-base text-center font-light mt-8">What do you want to do?</p>
       </div>
-      <div className="issue-invoice-container mt-8 text-center">
-        <div className="issue-invoice-title text-3xl font-semibold">
-          Issue Invoice
-        </div>
-        <div className="issue-invoice-subtitle text-sm font-light">
-          Send out the proper invoices for products
-        </div>
-        <div className="detail-1-container flex items-center mt-4 gap-2 justify-between">
-          <div className="detail-1 ">Item Name</div>
-          <div className="detail-1-input">
-            <input type="text" placeholder="Enter item name" />
+      <Link to="/ManufacturerGenerateStepOne">
+        <div className="generate-request-container mt-4 p-8 rounded-2xl ">
+          <div className="request-title">
+            <p className="text-2xl text-center">Create a Distribution Request</p>
+            <p className="text-center font-light">Send a sell order to a warehouse</p>
           </div>
         </div>
-        <div className="detail-2-container flex items-center mt-4 gap-2 justify-between">
-          <div className="detail-2 ">Quantity</div>
-          <div className="detail-2-input">
-            <input type="text" placeholder="Enter number of items" />
-          </div>
-        </div>
-        <div className="detail-3-container flex items-center mt-4 gap-2 justify-between">
-          <div className="detail-3 ">Unit Price</div>
-          <div className="detail-3-input">
-            <input type="text" placeholder="Enter price per unit" />
-          </div>
-        </div>
-        <div className="subtotal-container flex items-center mt-8 gap-2 justify-between">
-          <div className="subtotal ">Subtotal</div>
-          <div className="subtotal-display">$6.34</div>
-        </div>
-        <div className="tax-container flex items-center mt-8 gap-2 justify-between">
-          <div className="tax ">Tax(0%)</div>
-          <div className="tax-display">$0.00</div>
-        </div>
-        <div className="total-container flex items-center mt-8 gap-2 justify-between border-t pt-4">
-          <div className="total ">Total</div>
-          <div className="total-display">$6.34</div>
-        </div>
-        <div className="issue-invoice-container">
-          <button className="issue-invoice-btn">Issue Invoice</button>
+      </Link>
+      <div className="view-requests-container mt-4 p-8 rounded-2xl ">
+        <div className="incoming-request-title">
+          <p className="text-2xl text-center">View Incoming Purchase Requests</p>
+          <p className="text-center font-light">View purchase orders from Warehouses</p>
         </div>
       </div>
     </div>

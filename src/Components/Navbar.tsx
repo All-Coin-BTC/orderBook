@@ -38,33 +38,15 @@ export const Navbar = ({
       </div>
       {displayMobileMenu && (
         <div className="mobile-hamburger-display w-screen h-screen flex flex-col items-center">
-          <div
-            className="customers-hamburger-item text-xl font-light mt-6 flex items-center gap-3 cursor-pointer"
-            onClick={() => setDisplayCustomersLinks(!displayCustomersLinks)}
-          >
-            <p>Customers</p>
-            <img className="w-4 h-4" src="/down-arrow.png" alt="" />
-          </div>
-          <div
-            className={`${
-              displayCustomersLinks
-                ? "customers-dropdown-container-active text-center font-light text-grayText"
-                : "customers-dropdown-container-inactive"
-            }`}
-          >
-            <p>View Markets</p>
-            <p>Purchase History</p>
-            <p>Rewards Enrollment</p>
-          </div>
-          <div
-            className="customers-hamburger-item text-xl font-light mt-6 flex items-center gap-3 cursor-pointer"
-            onClick={() =>
-              setDisplayManufacturersLinks(!displayManufacturersLinks)
-            }
-          >
-            <p>Manufacturers</p>
-            <img className="w-4 h-4" src="/down-arrow.png" alt="" />
-          </div>
+          <Link to="/manufacturer-hub">
+            <div
+              className="customers-hamburger-item text-xl font-light mt-6 flex items-center gap-3 cursor-pointer"
+              onClick={() => setDisplayMobileMenu(false)}
+            >
+              <p>Manufacturers</p>
+              {/* <img className="w-4 h-4" src="/down-arrow.png" alt="" /> */}
+            </div>
+          </Link>
           <div
             className={`${
               displayManufacturersLinks
@@ -72,12 +54,7 @@ export const Navbar = ({
                 : "manufacturers-dropdown-container-inactive"
             }`}
           >
-            <Link
-              to="/manufacturer-hub"
-              onClick={() => setDisplayMobileMenu(!displayMobileMenu)}
-            >
-              <p>Create Invoice</p>
-            </Link>
+            <p>Create Invoice</p>
             <p>Invoice History</p>
             <p>Outstanding Invoices</p>
           </div>
@@ -86,7 +63,7 @@ export const Navbar = ({
             onClick={() => setDisplayWarehousesLinks(!displayWarehousesLinks)}
           >
             <p>Warehouses</p>
-            <img className="w-4 h-4" src="/down-arrow.png" alt="" />
+            {/* <img className="w-4 h-4" src="/down-arrow.png" alt="" /> */}
           </div>
           <div
             className={`${
@@ -104,7 +81,7 @@ export const Navbar = ({
             onClick={() => setDisplayLogisticsLink(!displayLogisticsLinks)}
           >
             <p>Logistics</p>
-            <img className="w-4 h-4" src="/down-arrow.png" alt="" />
+            {/* <img className="w-4 h-4" src="/down-arrow.png" alt="" /> */}
           </div>
           <div
             className={`${
