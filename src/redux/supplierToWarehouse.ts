@@ -12,6 +12,14 @@ export interface supplierToWarehouseData {
   productSubTotal: number;
   productEstimatedTax: number;
   productEstimatedTotal: number;
+  supplierLocation: string;
+  warehouseLocation: string;
+  totalMileage: number;
+  maximumAcceptableDeliveryTime: number;
+  logisticsProviderPremium: number;
+  logisticsSubtotal: number;
+  logisticsEstimatedTax: number;
+  logisticsEstimatedTotal: number;
 }
 
 const initialState: supplierToWarehouseData = {
@@ -25,6 +33,14 @@ const initialState: supplierToWarehouseData = {
   productSubTotal: 0,
   productEstimatedTax: 0,
   productEstimatedTotal: 0,
+  supplierLocation: "",
+  warehouseLocation: "",
+  totalMileage: 0,
+  maximumAcceptableDeliveryTime: 0,
+  logisticsProviderPremium: 0,
+  logisticsSubtotal: 0,
+  logisticsEstimatedTax: 0,
+  logisticsEstimatedTotal: 0,
 };
 
 export const supplierToWarehouseSlice = createSlice({
@@ -61,9 +77,36 @@ export const supplierToWarehouseSlice = createSlice({
     updateProductEstimatedTotal: (state, action: PayloadAction<number>) => {
       state.productEstimatedTotal = action.payload;
     },
+    updateSupplierLocation: (state, action: PayloadAction<string>) => {
+      state.supplierLocation = action.payload;
+    },
+    updateWarehouseLocation: (state, action: PayloadAction<string>) => {
+      state.warehouseLocation = action.payload;
+    },
+    updateTotalMileage: (state, action: PayloadAction<number>) => {
+      state.totalMileage = action.payload;
+    },
+    updateMaximumAcceptableDeliveryTime: (state, action: PayloadAction<number>) => {
+      state.maximumAcceptableDeliveryTime = action.payload;
+    },
+    updateLogisticsProviderPremium: (state, action: PayloadAction<number>) => {
+      state.logisticsProviderPremium = action.payload;
+    },
+    updateLogisticsSubtotal: (state, action: PayloadAction<number>) => {
+      state.logisticsSubtotal = action.payload;
+    },
+    updateLogisticsEstimatedTax: (state, action: PayloadAction<number>) => {
+      state.logisticsEstimatedTax = action.payload;
+    },
+    updateLogisticsEstimatedTotal: (state, action: PayloadAction<number>) => {
+      state.logisticsEstimatedTotal = action.payload;
+    },
   },
 });
 
+/*
+  
+  */
 // Action creators are generated for each case reducer function
 export const {
   updateWarehouseName,
@@ -76,6 +119,14 @@ export const {
   updateProductSubtotal,
   updateProductEstimatedTax,
   updateProductEstimatedTotal,
+  updateSupplierLocation,
+  updateWarehouseLocation,
+  updateTotalMileage,
+  updateMaximumAcceptableDeliveryTime,
+  updateLogisticsProviderPremium,
+  updateLogisticsSubtotal,
+  updateLogisticsEstimatedTax,
+  updateLogisticsEstimatedTotal,
 } = supplierToWarehouseSlice.actions;
 
 export default supplierToWarehouseSlice.reducer;

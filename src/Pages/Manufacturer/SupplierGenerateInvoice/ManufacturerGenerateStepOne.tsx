@@ -44,7 +44,6 @@ export default function ManufacturerGenerateStepOne() {
           <Link to="/ManufacturerGenerateStepTwo">
             <button className=" warehouse-submit-btn px-8 py-4 rounded-2xl">Next Step</button>
           </Link>
-          <button onClick={() => dispatch(updateWarehouseName(`Jerry`))}>TestNameChange</button>
         </div>
       </div>
     </div>
