@@ -99,13 +99,15 @@ input:focus {
 .enter-warehouse-details-container,
 .enter-manufacture-details-container,
 .enter-logistics-details-container,
-.review-details-container {
+.review-details-container,
+.enter-supplier-details-container {
   background-color: white;
   max-width: 400px;
 }
 .warehouse-input,
 .manufacture-input,
-.logistics-input {
+.logistics-input,
+.supplier-input {
   color: rgba(0, 0, 0, 0.87);
   border-bottom-color: rgba(0, 0, 0, 0.42);
   font-size: 1rem;
@@ -126,13 +128,15 @@ input:focus {
 }
 .warehouse-input:hover,
 .manufacture-input:hover,
-.logistics-input:hover {
+.logistics-input:hover,
+.supplier-input:hover {
   border-bottom-color: rgba(0, 0, 0, 0.87);
   background: #ececec;
 }
 .warehouse-input:focus,
 .manufacture-input:focus,
-.logistics-input:focus {
+.logistics-input:focus,
+.supplier-input:focus {
   border-color: #6200ee;
 }
 .warehouse-submit-btn,

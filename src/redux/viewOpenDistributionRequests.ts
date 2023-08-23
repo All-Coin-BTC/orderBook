@@ -1,16 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-export interface warehouseViewRequests {
+export interface viewOpenDistributionRequests {
   openRequests: Array<any>;
 }
 
-const initialState: warehouseViewRequests = {
+const initialState: viewOpenDistributionRequests = {
   openRequests: [],
 };
 
-export const warehouseViewSlice = createSlice({
-  name: "warehouseViewRequests",
+export const distributionOrdersSlice = createSlice({
+  name: "viewOpenDistributionRequests",
   initialState,
   reducers: {
     updateOpenRequests: (state, action: PayloadAction<Array<any>>) => {
@@ -23,6 +23,6 @@ export const warehouseViewSlice = createSlice({
   
   */
 // Action creators are generated for each case reducer function
-export const { updateOpenRequests } = warehouseViewSlice.actions;
+export const { updateOpenRequests } = distributionOrdersSlice.actions;
 
-export default warehouseViewSlice.reducer;
+export default distributionOrdersSlice.reducer;

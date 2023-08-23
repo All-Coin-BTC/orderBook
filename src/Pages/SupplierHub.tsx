@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 
 export default function SupplierHub() {
   return (
-    <div className="manufacturer-hub-container flex flex-col items-center">
-      <div className="manufacturer-title mt-8">
-        <p className="text-3xl text-center ">Welcome to the Manufacturer Hub</p>
-        <p className="text-base text-center font-light mt-8">What do you want to do?</p>
-      </div>
+    <div className="supplier-hub-container flex flex-col items-center">
+      <Link to="/supplier-generate-step-one">
+        <div className="supplier-title mt-8">
+          <p className="text-3xl text-center ">Welcome to the Supplier Hub</p>
+          <p className="text-base text-center font-light mt-8">What do you want to do?</p>
+        </div>
+      </Link>
       <Link to="/supplier-generate-step-one">
         <div className="generate-request-container mt-4 p-8 rounded-2xl ">
           <div className="request-title">
@@ -16,7 +18,7 @@ export default function SupplierHub() {
           </div>
         </div>
       </Link>
-      <Link to="/manufacturer-orders">
+      <Link to="/supplier-orders">
         <div className="generate-request-container mt-4 p-8 rounded-2xl ">
           <div className="request-title">
             <p className="text-2xl text-center">View Sent Requests</p>

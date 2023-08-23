@@ -24,7 +24,7 @@ export default function SupplierGenerateStepThree() {
     logisticsSubtotal,
     logisticsEstimatedTax,
     logisticsEstimatedTotal,
-  } = useSelector((state: RootState) => state.warehouse);
+  } = useSelector((state: RootState) => state.supplier);
 
   const dispatch = useDispatch();
 

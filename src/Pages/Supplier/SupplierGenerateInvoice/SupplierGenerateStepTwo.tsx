@@ -21,7 +21,7 @@ export default function SupplierGenerateStepTwo() {
     productSubTotal,
     productEstimatedTax,
     productEstimatedTotal,
-  } = useSelector((state: RootState) => state.warehouse);
+  } = useSelector((state: RootState) => state.supplier);
   const dispatch = useDispatch();
 
   useEffect(() => {

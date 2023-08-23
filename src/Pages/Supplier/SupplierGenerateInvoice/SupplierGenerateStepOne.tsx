@@ -9,7 +9,7 @@ import {
   updateWarehouseAddress,
 } from "../../../redux/supplierView/supplierToWarehouse";
 export default function SupplierGenerateStepOne() {
-  const { name, id, address } = useSelector((state: RootState) => state.warehouse);
+  const { name, id, address } = useSelector((state: RootState) => state.supplier);
 
   const dispatch = useDispatch();
   return (

@@ -4,17 +4,16 @@ import Homepage from "./Pages/Homepage";
 import { Navbar } from "./Components/Navbar";
 import ChooseRole from "./Pages/ChooseRole";
 import { Route, Routes } from "react-router-dom";
-
 import WarehousingHub from "./Pages/WarehousingHub";
 import SupplierHub from "./Pages/SupplierHub";
-import WarehouseViewRequests from "./Pages/WarehouseViewRequests/WarehouseViewRequests";
-
+import WarehouseViewRequests from "./Pages/Warehouse/WarehouseViewRequests";
 import SupplierGenerateStepOne from "./Pages/Supplier/SupplierGenerateInvoice/SupplierGenerateStepOne";
 import SupplierGenerateStepTwo from "./Pages/Supplier/SupplierGenerateInvoice/SupplierGenerateStepTwo";
 import SupplierGenerateStepThree from "./Pages/Supplier/SupplierGenerateInvoice/SupplierGenerateStepThree";
 import SupplierReviewPage from "./Pages/Supplier/SupplierGenerateInvoice/SupplierReviewPage";
 import SupplierCompleteInvoice from "./Pages/Supplier/SupplierGenerateInvoice/SupplierCompleteInvoice";
 import SupplierOrders from "./Pages/Supplier/SupplierOrders";
+import WarehouseGenerateStepOne from "./Pages/Warehouse/WarehouseGenerateOrder/WarehouseGenerateStepOne";
 
 function App() {
   const [displayMobileMenu, setDisplayMobileMenu] = useState<boolean>(false);
@@ -33,6 +32,7 @@ function App() {
         {!displayMobileMenu && <Route path="/supplier-orders" element={<SupplierOrders />} />}
         {!displayMobileMenu && <Route path="/warehouse-hub" element={<WarehousingHub />} />}
         {!displayMobileMenu && <Route path="/warehouse-requests" element={<WarehouseViewRequests />} />}
+        {!displayMobileMenu && <Route path="/warehouse-generate-step-one" element={<WarehouseGenerateStepOne />} />}
       </Routes>
     </>
   );

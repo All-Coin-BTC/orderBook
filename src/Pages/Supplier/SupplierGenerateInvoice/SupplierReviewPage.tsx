@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import type { RootState } from "../../../redux/store";
 import { useDispatch } from "react-redux";
-import { updateOpenRequests } from "../../../redux/warehouseViewRequests";
+import { updateOpenRequests } from "../../../redux/viewOpenDistributionRequests";
 export default function SupplierReviewPage() {
   const {
     name,
@@ -24,7 +24,7 @@ export default function SupplierReviewPage() {
     logisticsSubtotal,
     logisticsEstimatedTax,
     logisticsEstimatedTotal,
-  } = useSelector((state: RootState) => state.warehouse);
+  } = useSelector((state: RootState) => state.supplier);
 
   const dispatch = useDispatch();
   const { openRequests } = useSelector((state: RootState) => state.warehouseView);
