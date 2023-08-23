@@ -12,6 +12,7 @@ import ManufacturerGenerateStepThree from "./Pages/Manufacturer/SupplierGenerate
 import ManufacturerReviewPage from "./Pages/Manufacturer/SupplierGenerateInvoice/ManufacturerReviewPage";
 import ManufacturerCompleteInvoice from "./Pages/Manufacturer/SupplierGenerateInvoice/ManufacturerCompleteInvoice";
 import WarehouseViewRequests from "./Pages/WarehouseViewRequests/WarehouseViewRequests";
+import ManufacturerOrders from "./Pages/Manufacturer/ManufacturerOrders";
 
 function App() {
   const [displayMobileMenu, setDisplayMobileMenu] = useState<boolean>(false);
@@ -27,6 +28,7 @@ function App() {
         {!displayMobileMenu && <Route path="/ManufacturerGenerateStepThree" element={<ManufacturerGenerateStepThree />} />}
         {!displayMobileMenu && <Route path="/ManufacturerReviewPage" element={<ManufacturerReviewPage />} />}
         {!displayMobileMenu && <Route path="/manufacturer-complete-invoice" element={<ManufacturerCompleteInvoice />} />}
+        {!displayMobileMenu && <Route path="/manufacturer-orders" element={<ManufacturerOrders />} />}
         {!displayMobileMenu && <Route path="/warehouse-hub" element={<WarehousingHub />} />}
         {!displayMobileMenu && <Route path="/warehouse-requests" element={<WarehouseViewRequests />} />}
       </Routes>

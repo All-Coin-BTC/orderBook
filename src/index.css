@@ -158,3 +158,8 @@ input:focus {
 .logistics-dropdown-container-active {
   display: block;
 }
+
+/*OPen orders*/
+.open-order-card {
+  background: white;
+}

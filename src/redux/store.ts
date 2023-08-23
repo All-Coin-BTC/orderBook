@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import warehouseReducer from "./supplierToWarehouse";
+import warehouseReducer from "./supplierView/supplierToWarehouse";
+import warehouseViewOrdersReducer from "./warehouseViewRequests";
 export const store = configureStore({
   reducer: {
     warehouse: warehouseReducer,
+    warehouseView: warehouseViewOrdersReducer,
   },
 });
 

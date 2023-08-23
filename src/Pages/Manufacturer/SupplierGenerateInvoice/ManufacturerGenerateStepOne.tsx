@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import type { RootState } from "../../../redux/store";
 import { useDispatch } from "react-redux";
-import { updateWarehouseName, updateWarehouseId, updateWarehouseAddress } from "../../../redux/supplierToWarehouse";
+import {
+  updateWarehouseName,
+  updateWarehouseId,
+  updateWarehouseAddress,
+} from "../../../redux/supplierView/supplierToWarehouse";
 export default function ManufacturerGenerateStepOne() {
   const { name, id, address } = useSelector((state: RootState) => state.warehouse);
 

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import type { RootState } from "../../../redux/store";
 import { useDispatch } from "react-redux";
+
 import {
   updateSupplierLocation,
   updateWarehouseLocation,
@@ -12,7 +13,7 @@ import {
   updateLogisticsSubtotal,
   updateLogisticsEstimatedTax,
   updateLogisticsEstimatedTotal,
-} from "../../../redux/supplierToWarehouse";
+} from "../../../redux/supplierView/supplierToWarehouse";
 export default function ManufacturerGenerateStepThree() {
   const {
     supplierLocation,

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import type { RootState } from "../../../redux/store";
 import { useDispatch } from "react-redux";
-
+import { updateOpenRequests } from "../../../redux/warehouseViewRequests";
 export default function ManufacturerReviewPage() {
   const {
     name,
@@ -27,7 +27,8 @@ export default function ManufacturerReviewPage() {
   } = useSelector((state: RootState) => state.warehouse);
 
   const dispatch = useDispatch();
-
+  const { openRequests } = useSelector((state: RootState) => state.warehouseView);
+  console.log(openRequests);
   function pushToOpenOrders() {}
   return (
     <div className="review-container text-start flex flex-col items-center justify-center font-light text-sm">
@@ -65,17 +66,16 @@ export default function ManufacturerReviewPage() {
         </div>
         <div className="review-subtotal mt-4 flex justify-between items-center gap-1">
           <div>Subtotal</div>
-          <div>${productSubTotal}</div>
+          <div>${productSubTotal.toFixed(2)}</div>
         </div>
         <div className="review-estimated-tax mt-4 flex justify-between items-center gap-1">
           <div>Estimated Tax</div>
-          <div>${productEstimatedTax}</div>
+          <div>${productEstimatedTax.toFixed(2)}</div>
         </div>
         <div className="review-total mt-4 flex justify-between items-center gap-1 border-t py-8">
           <div>Estimated Total</div>
-          <div>${productEstimatedTotal}</div>
+          <div>${productEstimatedTotal.toFixed(2)}</div>
         </div>
-
         <div className="text-center font-bold mt-4 ">Logistics Details</div>
         <div className="review-field-five mt-4 flex justify-between items-center gap-1">
           <div>Trip Distance</div>
@@ -91,15 +91,49 @@ export default function ManufacturerReviewPage() {
         </div>
         <div className="review-estimated-tax mt-4 flex justify-between items-center gap-1">
           <div>Estimated Tax</div>
-          <div>${logisticsEstimatedTax}</div>
+          <div>${logisticsEstimatedTax.toFixed(2)}</div>
         </div>
         <div className="review-total mt-4 flex justify-between items-center gap-1 border-t py-8">
           <div>Estimated Total</div>
-          <div>${logisticsEstimatedTotal}</div>
+          <div>${logisticsEstimatedTotal.toFixed(2)}</div>
+        </div>
+        <div className="grand-total mt-4 flex justify-between items-center gap-1 border-t py-8">
+          <div>Grand Total</div>
+          <div>${(logisticsEstimatedTotal + productEstimatedTotal).toFixed(2)}</div>
         </div>
         <div className="next-logistics flex justify-center items-center">
           <Link to="/manufacturer-complete-invoice">
-            <button className="manufacture-submit-btn px-8 py-4 rounded-2xl">Submit Order</button>
+            <button
+              className="manufacture-submit-btn px-8 py-4 rounded-2xl"
+              onClick={() =>
+                dispatch(
+                  updateOpenRequests([
+                    {
+                      name: name,
+                      id: id,
+                      address: address,
+                      productName: productName,
+                      productId: productId,
+                      productQuantity: productQuantity,
+                      pricePerUnit: pricePerUnit,
+                      productSubTotal: productSubTotal,
+                      productEstimatedTax: productEstimatedTax,
+                      productEstimatedTotal: productEstimatedTotal,
+                      supplierLocation: supplierLocation,
+                      warehouseLocation: warehouseLocation,
+                      totalMileage: totalMileage,
+                      maximumAcceptableDeliveryTime: maximumAcceptableDeliveryTime,
+                      logisticsProviderPremium: logisticsProviderPremium,
+                      logisticsSubtotal: logisticsSubtotal,
+                      logisticsEstimatedTax: logisticsEstimatedTax,
+                      logisticsEstimatedTotal: logisticsEstimatedTotal,
+                    },
+                  ])
+                )
+              }
+            >
+              Submit Order
+            </button>
           </Link>
         </div>
       </div>

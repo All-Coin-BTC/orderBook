@@ -11,7 +11,7 @@ import {
   updateProductSubtotal,
   updateProductEstimatedTax,
   updateProductEstimatedTotal,
-} from "../../../redux/supplierToWarehouse";
+} from "../../../redux/supplierView/supplierToWarehouse";
 export default function ManufacturerGenerateStepTwo() {
   const {
     productName,
