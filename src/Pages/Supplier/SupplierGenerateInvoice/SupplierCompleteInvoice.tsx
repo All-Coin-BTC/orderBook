@@ -4,11 +4,11 @@ import type { RootState } from "../../../redux/store";
 
 import { Link } from "react-router-dom";
 
-export default function ManufacturerCompleteInvoice() {
+export default function SupplierCompleteInvoice() {
   return (
     <div className="flex flex-col justify-center items-center">
       <p>Your Order has been sent successfully.</p>
-      <Link to="/manufacturer-orders">
+      <Link to="/supplier-orders">
         <button>View Orders</button>
       </Link>
     </div>

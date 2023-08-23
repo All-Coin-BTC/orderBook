@@ -1,18 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function ManufacturerHub() {
+export default function SupplierHub() {
   return (
     <div className="manufacturer-hub-container flex flex-col items-center">
       <div className="manufacturer-title mt-8">
         <p className="text-3xl text-center ">Welcome to the Manufacturer Hub</p>
         <p className="text-base text-center font-light mt-8">What do you want to do?</p>
       </div>
-      <Link to="/ManufacturerGenerateStepOne">
+      <Link to="/supplier-generate-step-one">
         <div className="generate-request-container mt-4 p-8 rounded-2xl ">
           <div className="request-title">
             <p className="text-2xl text-center">Create a Distribution Request</p>
             <p className="text-center font-light">Send a sell order to a warehouse</p>
+          </div>
+        </div>
+      </Link>
+      <Link to="/manufacturer-orders">
+        <div className="generate-request-container mt-4 p-8 rounded-2xl ">
+          <div className="request-title">
+            <p className="text-2xl text-center">View Sent Requests</p>
+            <p className="text-center font-light">Browse the orders you have sent out</p>
           </div>
         </div>
       </Link>

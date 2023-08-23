@@ -4,7 +4,7 @@ import { useSelector } from "react-redux/es/hooks/useSelector";
 import type { RootState } from "../../../redux/store";
 import { useDispatch } from "react-redux";
 import { updateOpenRequests } from "../../../redux/warehouseViewRequests";
-export default function ManufacturerReviewPage() {
+export default function SupplierReviewPage() {
   const {
     name,
     id,
@@ -29,7 +29,6 @@ export default function ManufacturerReviewPage() {
   const dispatch = useDispatch();
   const { openRequests } = useSelector((state: RootState) => state.warehouseView);
   console.log(openRequests);
-  function pushToOpenOrders() {}
   return (
     <div className="review-container text-start flex flex-col items-center justify-center font-light text-sm">
       <div className="review-details-container rounded-2xl p-4 px-8">
@@ -102,38 +101,37 @@ export default function ManufacturerReviewPage() {
           <div>${(logisticsEstimatedTotal + productEstimatedTotal).toFixed(2)}</div>
         </div>
         <div className="next-logistics flex justify-center items-center">
-          <Link to="/manufacturer-complete-invoice">
-            <button
-              className="manufacture-submit-btn px-8 py-4 rounded-2xl"
-              onClick={() =>
-                dispatch(
-                  updateOpenRequests([
-                    {
-                      name: name,
-                      id: id,
-                      address: address,
-                      productName: productName,
-                      productId: productId,
-                      productQuantity: productQuantity,
-                      pricePerUnit: pricePerUnit,
-                      productSubTotal: productSubTotal,
-                      productEstimatedTax: productEstimatedTax,
-                      productEstimatedTotal: productEstimatedTotal,
-                      supplierLocation: supplierLocation,
-                      warehouseLocation: warehouseLocation,
-                      totalMileage: totalMileage,
-                      maximumAcceptableDeliveryTime: maximumAcceptableDeliveryTime,
-                      logisticsProviderPremium: logisticsProviderPremium,
-                      logisticsSubtotal: logisticsSubtotal,
-                      logisticsEstimatedTax: logisticsEstimatedTax,
-                      logisticsEstimatedTotal: logisticsEstimatedTotal,
-                    },
-                  ])
-                )
-              }
-            >
-              Submit Order
-            </button>
+          <Link
+            to="/supplier-complete-invoice"
+            onClick={() =>
+              dispatch(
+                updateOpenRequests([
+                  ...openRequests,
+                  {
+                    name: name,
+                    id: id,
+                    address: address,
+                    productName: productName,
+                    productId: productId,
+                    productQuantity: productQuantity,
+                    pricePerUnit: pricePerUnit,
+                    productSubTotal: productSubTotal,
+                    productEstimatedTax: productEstimatedTax,
+                    productEstimatedTotal: productEstimatedTotal,
+                    supplierLocation: supplierLocation,
+                    warehouseLocation: warehouseLocation,
+                    totalMileage: totalMileage,
+                    maximumAcceptableDeliveryTime: maximumAcceptableDeliveryTime,
+                    logisticsProviderPremium: logisticsProviderPremium,
+                    logisticsSubtotal: logisticsSubtotal,
+                    logisticsEstimatedTax: logisticsEstimatedTax,
+                    logisticsEstimatedTotal: logisticsEstimatedTotal,
+                  },
+                ])
+              )
+            }
+          >
+            <button className="manufacture-submit-btn px-8 py-4 rounded-2xl">Submit Order</button>
           </Link>
         </div>
       </div>

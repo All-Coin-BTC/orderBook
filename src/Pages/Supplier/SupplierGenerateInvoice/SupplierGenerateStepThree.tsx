@@ -14,7 +14,7 @@ import {
   updateLogisticsEstimatedTax,
   updateLogisticsEstimatedTotal,
 } from "../../../redux/supplierView/supplierToWarehouse";
-export default function ManufacturerGenerateStepThree() {
+export default function SupplierGenerateStepThree() {
   const {
     supplierLocation,
     warehouseLocation,
@@ -103,7 +103,7 @@ export default function ManufacturerGenerateStepThree() {
           <div>${logisticsEstimatedTotal.toFixed(2)}</div>
         </div>
         <div className="next-logistics flex justify-center items-center">
-          <Link to="/ManufacturerReviewPage">
+          <Link to="/supplier-review-page">
             <button className="manufacture-submit-btn px-8 py-4 rounded-2xl">Next</button>
           </Link>
         </div>

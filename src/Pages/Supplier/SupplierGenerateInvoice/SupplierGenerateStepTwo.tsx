@@ -12,7 +12,7 @@ import {
   updateProductEstimatedTax,
   updateProductEstimatedTotal,
 } from "../../../redux/supplierView/supplierToWarehouse";
-export default function ManufacturerGenerateStepTwo() {
+export default function SupplierGenerateStepTwo() {
   const {
     productName,
     productId,
@@ -90,7 +90,7 @@ export default function ManufacturerGenerateStepTwo() {
           <div>${productEstimatedTotal.toFixed(2)}</div>
         </div>
         <div className="next-logistics flex justify-center items-center">
-          <Link to="/ManufacturerGenerateStepThree">
+          <Link to="/supplier-generate-step-three">
             <button className="manufacture-submit-btn px-8 py-4 rounded-2xl">Next</button>
           </Link>
         </div>

@@ -8,7 +8,7 @@ import {
   updateWarehouseId,
   updateWarehouseAddress,
 } from "../../../redux/supplierView/supplierToWarehouse";
-export default function ManufacturerGenerateStepOne() {
+export default function SupplierGenerateStepOne() {
   const { name, id, address } = useSelector((state: RootState) => state.warehouse);
 
   const dispatch = useDispatch();
@@ -45,7 +45,7 @@ export default function ManufacturerGenerateStepOne() {
           />
         </div>
         <div className="warehouse-details-submit mt-8 flex justify-center items-center">
-          <Link to="/ManufacturerGenerateStepTwo">
+          <Link to="/supplier-generate-step-two">
             <button className=" warehouse-submit-btn px-8 py-4 rounded-2xl">Next Step</button>
           </Link>
         </div>

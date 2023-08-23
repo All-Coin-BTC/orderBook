@@ -6,9 +6,9 @@ export default function ChooseRole() {
     <div>
       <div className="roles-title text-4xl text-center font-bold mt-8 ">Choose the role that best describes you</div>
       <div className="roles-container grid grid-cols-1 grid-rows-3 gap-4 p-2 mt-4">
-        <Link to="/manufacturer-hub">
+        <Link to="/supplier-hub">
           <div className="role-container text-center p-4 ">
-            <p className="text-lg font-semibold">Manufacturer</p>
+            <p className="text-lg font-semibold">Supplier</p>
             <p className="text-sm font-light">Create and view orders</p>
           </div>
         </Link>
