@@ -26,12 +26,14 @@ export default function SupplierHub() {
           </div>
         </div>
       </Link>
-      <div className="view-requests-container mt-4 p-8 rounded-2xl ">
-        <div className="incoming-request-title">
-          <p className="text-2xl text-center">View Incoming Purchase Requests</p>
-          <p className="text-center font-light">View purchase orders from Warehouses</p>
+      <Link to="/warehouse-orders">
+        <div className="view-requests-container mt-4 p-8 rounded-2xl ">
+          <div className="incoming-request-title">
+            <p className="text-2xl text-center">View Incoming Purchase Requests</p>
+            <p className="text-center font-light">View purchase orders from Warehouses</p>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }

@@ -4,128 +4,126 @@ import { useSelector } from "react-redux/es/hooks/useSelector";
 import type { RootState } from "../../../redux/store";
 import { useDispatch } from "react-redux";
 import { updateOpenRequests } from "../../../redux/viewOpenDistributionRequests";
-
-export default function SupplierReviewPage() {
+import { updateOpenBuyRequests } from "../../../redux/viewOpenBuyRequests";
+export default function WarehouseReviewPage() {
   const {
-    name,
-    id,
-    address,
-    productName,
-    productId,
-    productQuantity,
-    pricePerUnit,
-    productSubTotal,
-    productEstimatedTax,
-    productEstimatedTotal,
-    supplierLocation,
-    warehouseLocation,
-    totalMileage,
-    maximumAcceptableDeliveryTime,
-    logisticsProviderPremium,
-    logisticsSubtotal,
-    logisticsEstimatedTax,
-    logisticsEstimatedTotal,
-  } = useSelector((state: RootState) => state.supplier);
+    wTSname,
+    wTSsupplierId,
+    wTSaddress,
+    wTSproductName,
+    wTSproductId,
+    wTSproductQuantity,
+    wTSpricePerUnit,
+    wTSproductSubTotal,
+    wTSproductEstimatedTax,
+    wTSproductEstimatedTotal,
+    wTSsupplierLocation,
+    wTSwarehouseLocation,
+    wTStotalMileage,
+    wTSmaximumAcceptableDeliveryTime,
+    wTSlogisticsProviderPremium,
+    wTSlogisticsSubtotal,
+    wTSlogisticsEstimatedTax,
+    wTSlogisticsEstimatedTotal,
+  } = useSelector((state: RootState) => state.warehouseToSupplier);
+
   const dispatch = useDispatch();
-  const { openRequests } = useSelector((state: RootState) => state.warehouseView);
-  console.log(openRequests);
+  const { openBuyRequests } = useSelector((state: RootState) => state.supplierView);
+  console.log(openBuyRequests);
   return (
     <div className="review-container text-start flex flex-col items-center justify-center font-light text-sm">
       <div className="review-details-container rounded-2xl p-4 px-8">
         <div className="title text-2xl font-semibold text-center">Review</div>
         <div className="subtitle text-lg font-light text-center">Validate Transaction Details</div>
-        <div className="text-center font-bold mt-4 ">Warehouse Details</div>
+        <div className="text-center font-bold mt-4 ">Supplier Details</div>
         <div className="review-field-one mt-4 flex justify-between items-center gap-1">
-          <div>Recipient Name</div>
-          <div>{name}</div>
+          <div>Supplier Name</div>
+          <div>{wTSname}</div>
         </div>
         <div className="review-field-two mt-4 flex justify-between items-center gap-1">
-          <div>Recipient ID</div>
-          <div>{id}</div>
+          <div>Supplier ID</div>
+          <div>{wTSsupplierId}</div>
         </div>
-        <div className="review-field-three mt-4 flex justify-between items-center gap-1">
-          <div>Recipient Address</div>
-          <div>{address}</div>
-        </div>
+
         <div className="review-field-four mt-4 flex justify-between items-center gap-1">
           <div>Product Name</div>
-          <div>{productName}</div>
+          <div>{wTSproductName}</div>
         </div>
         <div className="review-field-five mt-4 flex justify-between items-center gap-1">
           <div>Product ID</div>
-          <div>{productId}</div>
+          <div>{wTSproductId}</div>
         </div>
         <div className="review-field-five mt-4 flex justify-between items-center gap-1">
           <div>Quantity</div>
-          <div>{productQuantity}</div>
+          <div>{wTSproductQuantity}</div>
         </div>
         <div className="review-field-five mt-4 flex justify-between items-center gap-1">
           <div>Price / Unit</div>
-          <div>{pricePerUnit}</div>
+          <div>{wTSpricePerUnit}</div>
         </div>
         <div className="review-subtotal mt-4 flex justify-between items-center gap-1">
           <div>Subtotal</div>
-          <div>${productSubTotal.toFixed(2)}</div>
+          <div>${wTSproductSubTotal.toFixed(2)}</div>
         </div>
         <div className="review-estimated-tax mt-4 flex justify-between items-center gap-1">
           <div>Estimated Tax</div>
-          <div>${productEstimatedTax.toFixed(2)}</div>
+          <div>${wTSproductEstimatedTax.toFixed(2)}</div>
         </div>
         <div className="review-total mt-4 flex justify-between items-center gap-1 border-t py-8">
           <div>Estimated Total</div>
-          <div>${productEstimatedTotal.toFixed(2)}</div>
+          <div>${wTSproductEstimatedTotal.toFixed(2)}</div>
         </div>
         <div className="text-center font-bold mt-4 ">Logistics Details</div>
         <div className="review-field-five mt-4 flex justify-between items-center gap-1">
           <div>Trip Distance</div>
-          <div>${totalMileage}</div>
+          <div>${wTStotalMileage}</div>
         </div>
         <div className="review-field-five mt-4 flex justify-between items-center gap-1">
           <div>Logistics Provider Premium</div>
-          <div>${logisticsProviderPremium}</div>
+          <div>${wTSlogisticsProviderPremium}</div>
         </div>
         <div className="review-subtotal mt-4 flex justify-between items-center gap-1">
           <div>Subtotal</div>
-          <div>${logisticsSubtotal}</div>
+          <div>${wTSlogisticsSubtotal}</div>
         </div>
         <div className="review-estimated-tax mt-4 flex justify-between items-center gap-1">
           <div>Estimated Tax</div>
-          <div>${logisticsEstimatedTax.toFixed(2)}</div>
+          <div>${wTSlogisticsEstimatedTax.toFixed(2)}</div>
         </div>
         <div className="review-total mt-4 flex justify-between items-center gap-1 border-t py-8">
           <div>Estimated Total</div>
-          <div>${logisticsEstimatedTotal.toFixed(2)}</div>
+          <div>${wTSlogisticsEstimatedTotal.toFixed(2)}</div>
         </div>
         <div className="grand-total mt-4 flex justify-between items-center gap-1 border-t py-8">
           <div>Grand Total</div>
-          <div>${(logisticsEstimatedTotal + productEstimatedTotal).toFixed(2)}</div>
+          <div>${(wTSlogisticsEstimatedTotal + wTSproductEstimatedTotal).toFixed(2)}</div>
         </div>
         <div className="next-logistics flex justify-center items-center">
           <Link
-            to="/supplier-complete-invoice"
+            to="/warehouse-complete-invoice"
             onClick={() =>
               dispatch(
-                updateOpenRequests([
-                  ...openRequests,
+                updateOpenBuyRequests([
+                  ...openBuyRequests,
                   {
-                    name: name,
-                    id: id,
-                    address: address,
-                    productName: productName,
-                    productId: productId,
-                    productQuantity: productQuantity,
-                    pricePerUnit: pricePerUnit,
-                    productSubTotal: productSubTotal,
-                    productEstimatedTax: productEstimatedTax,
-                    productEstimatedTotal: productEstimatedTotal,
-                    supplierLocation: supplierLocation,
-                    warehouseLocation: warehouseLocation,
-                    totalMileage: totalMileage,
-                    maximumAcceptableDeliveryTime: maximumAcceptableDeliveryTime,
-                    logisticsProviderPremium: logisticsProviderPremium,
-                    logisticsSubtotal: logisticsSubtotal,
-                    logisticsEstimatedTax: logisticsEstimatedTax,
-                    logisticsEstimatedTotal: logisticsEstimatedTotal,
+                    wTSname: wTSname,
+                    wTSsupplierId: wTSsupplierId,
+                    wTSaddress: wTSaddress,
+                    wTSproductName: wTSproductName,
+                    wTSproductId: wTSproductId,
+                    wTSproductQuantity: wTSproductQuantity,
+                    wTSpricePerUnit: wTSpricePerUnit,
+                    wTSproductSubTotal: wTSproductSubTotal,
+                    wTSproductEstimatedTax: wTSproductEstimatedTax,
+                    wTSproductEstimatedTotal: wTSproductEstimatedTotal,
+                    wTSsupplierLocation: wTSsupplierLocation,
+                    wTSwarehouseLocation: wTSwarehouseLocation,
+                    wTStotalMileage: wTStotalMileage,
+                    wTSmaximumAcceptableDeliveryTime: wTSmaximumAcceptableDeliveryTime,
+                    wTSlogisticsProviderPremium: wTSlogisticsProviderPremium,
+                    wTSlogisticsSubtotal: wTSlogisticsSubtotal,
+                    wTSlogisticsEstimatedTax: wTSlogisticsEstimatedTax,
+                    wTSlogisticsEstimatedTotal: wTSlogisticsEstimatedTotal,
                   },
                 ])
               )

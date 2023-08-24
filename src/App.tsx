@@ -14,6 +14,11 @@ import SupplierReviewPage from "./Pages/Supplier/SupplierGenerateInvoice/Supplie
 import SupplierCompleteInvoice from "./Pages/Supplier/SupplierGenerateInvoice/SupplierCompleteInvoice";
 import SupplierOrders from "./Pages/Supplier/SupplierOrders";
 import WarehouseGenerateStepOne from "./Pages/Warehouse/WarehouseGenerateOrder/WarehouseGenerateStepOne";
+import WarehouseGenerateStepTwo from "./Pages/Warehouse/WarehouseGenerateOrder/WarehouseGenerateStepTwo";
+import WarehouseGenerateStepThree from "./Pages/Warehouse/WarehouseGenerateOrder/WarehouseGenerateStepThree";
+import WarehouseReviewPage from "./Pages/Warehouse/WarehouseGenerateOrder/WarehouseReviewPage";
+import WarehouseCompleteInvoice from "./Pages/Warehouse/WarehouseGenerateOrder/WarehouseCompleteInvoice";
+import WarehouseOrders from "./Pages/Warehouse/WarehouseOrders";
 
 function App() {
   const [displayMobileMenu, setDisplayMobileMenu] = useState<boolean>(false);
@@ -33,6 +38,11 @@ function App() {
         {!displayMobileMenu && <Route path="/warehouse-hub" element={<WarehousingHub />} />}
         {!displayMobileMenu && <Route path="/warehouse-requests" element={<WarehouseViewRequests />} />}
         {!displayMobileMenu && <Route path="/warehouse-generate-step-one" element={<WarehouseGenerateStepOne />} />}
+        {!displayMobileMenu && <Route path="/warehouse-generate-step-two" element={<WarehouseGenerateStepTwo />} />}
+        {!displayMobileMenu && <Route path="/warehouse-generate-step-three" element={<WarehouseGenerateStepThree />} />}
+        {!displayMobileMenu && <Route path="/warehouse-review-page" element={<WarehouseReviewPage />} />}
+        {!displayMobileMenu && <Route path="/warehouse-complete-invoice" element={<WarehouseCompleteInvoice />} />}
+        {!displayMobileMenu && <Route path="/warehouse-orders" element={<WarehouseOrders />} />}
       </Routes>
     </>
   );
