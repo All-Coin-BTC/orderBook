@@ -167,3 +167,10 @@ input:focus {
 .open-order-card {
   background: white;
 }
+
+/*warehouse-orders*/
+.supplier-accepts-button {
+  background-color: whitesmoke;
+  padding: 8px 16px;
+  border-radius: 16px;
+}

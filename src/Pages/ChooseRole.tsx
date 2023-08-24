@@ -18,11 +18,12 @@ export default function ChooseRole() {
             <p className="text-sm font-light">Restock and manage your inventory.</p>
           </div>
         </Link>
-
-        <div className="role-container text-center p-4 ">
-          <p className="text-lg font-semibold">Logistics</p>
-          <p className="text-sm font-light">Accept and perform delivery requests</p>
-        </div>
+        <Link to="/logistics-hub">
+          <div className="role-container text-center p-4 ">
+            <p className="text-lg font-semibold">Logistics</p>
+            <p className="text-sm font-light">Accept and perform delivery requests</p>
+          </div>
+        </Link>
       </div>
     </div>
   );

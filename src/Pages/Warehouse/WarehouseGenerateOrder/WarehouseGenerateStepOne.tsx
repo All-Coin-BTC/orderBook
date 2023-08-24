@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import type { RootState } from "../../../redux/store";
 import { useDispatch } from "react-redux";
-import { updateWTSSupplierName, updateWTSsupplierId } from "../../../redux/warehouseView/WarehouseToSupplier";
+import {
+  updateWTSSupplierLocation,
+  updateWTSSupplierName,
+  updateWTSsupplierId,
+} from "../../../redux/warehouseView/WarehouseToSupplier";
 export default function WarehouseGenerateStepOne() {
-  const { wTSname, wTSsupplierId, wTSaddress } = useSelector((state: RootState) => state.warehouseToSupplier);
+  const { wTSname, wTSsupplierId, wTSsupplierLocation } = useSelector((state: RootState) => state.warehouseToSupplier);
 
   const dispatch = useDispatch();
   return (
@@ -31,6 +35,15 @@ export default function WarehouseGenerateStepOne() {
             type="text"
             value={wTSsupplierId}
             onChange={(e) => dispatch(updateWTSsupplierId(e.target.value))}
+          />
+        </div>
+        <div className="warehouse-field-two font-light flex justify-between items-center mt-4 gap-1">
+          <div>Supplier Address</div>
+          <input
+            className="warehouse-input"
+            type="text"
+            value={wTSsupplierLocation}
+            onChange={(e) => dispatch(updateWTSSupplierLocation(e.target.value))}
           />
         </div>
 

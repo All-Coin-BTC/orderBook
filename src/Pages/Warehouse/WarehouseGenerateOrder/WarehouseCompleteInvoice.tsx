@@ -8,8 +8,8 @@ export default function WarehouseCompleteInvoice() {
   return (
     <div className="flex flex-col justify-center items-center">
       <p>Your Order has been sent successfully.</p>
-      <Link to="/warehouse-orders">
-        <button>View Orders</button>
+      <Link to="/">
+        <button>Return Home</button>
       </Link>
     </div>
   );

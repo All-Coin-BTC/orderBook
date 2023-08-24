@@ -1,9 +1,12 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import { nanoid } from "@reduxjs/toolkit";
+import { updateAcceptedOrders } from "../../redux/viewAcceptedOrders";
 export default function WarehouseOrders() {
   const { openBuyRequests } = useSelector((state: RootState) => state.supplierView);
+  const { acceptedOrders } = useSelector((state: RootState) => state.acceptedDeals);
+  const dispatch = useDispatch();
 
   return (
     <div className="flex flex-col px-6 font-light">
@@ -20,7 +23,7 @@ export default function WarehouseOrders() {
           </div>
           <div className="flex justify-between mt-4">
             <p>Supplier Address</p>
-            <p>{openBuyRequests[i].wTSaddress}</p>
+            <p>{openBuyRequests[i].wTSsupplierLocation}</p>
           </div>
           <div className="flex justify-between mt-4">
             <p>Product Name</p>
@@ -40,7 +43,15 @@ export default function WarehouseOrders() {
           </div>
           <div className="flex justify-between mt-4">
             <p>Estimated Grand Total</p>
-            <p>{(openBuyRequests[i].wTSproductEstimatedTotal + openBuyRequests[0].wTSlogisticsEstimatedTotal).toFixed(2)}</p>
+            <p>{(openBuyRequests[i].wTSproductEstimatedTotal + openBuyRequests[i].wTSlogisticsEstimatedTotal).toFixed(2)}</p>
+          </div>
+          <div className=" flex justify-center items-center mt-4">
+            <button
+              className="supplier-accepts-button"
+              onClick={() => dispatch(updateAcceptedOrders([...acceptedOrders, openBuyRequests[i]]))}
+            >
+              Accept Transaction
+            </button>
           </div>
         </div>
       ))}

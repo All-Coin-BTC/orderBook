@@ -4,7 +4,7 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 export interface warehouseToSupplierData {
   wTSname: string;
   wTSsupplierId: string;
-  wTSaddress: string;
+
   wTSproductName: string;
   wTSproductId: string;
   wTSproductQuantity: number;
@@ -20,12 +20,13 @@ export interface warehouseToSupplierData {
   wTSlogisticsSubtotal: number;
   wTSlogisticsEstimatedTax: number;
   wTSlogisticsEstimatedTotal: number;
+  wTSsupplierAccepts: boolean;
 }
 
 const initialState: warehouseToSupplierData = {
   wTSname: "",
   wTSsupplierId: "",
-  wTSaddress: "",
+
   wTSproductName: "",
   wTSproductId: "",
   wTSproductQuantity: 0,
@@ -41,6 +42,7 @@ const initialState: warehouseToSupplierData = {
   wTSlogisticsSubtotal: 0,
   wTSlogisticsEstimatedTax: 0,
   wTSlogisticsEstimatedTotal: 0,
+  wTSsupplierAccepts: false,
 };
 
 export const warehouseToSupplierSlice = createSlice({
@@ -53,9 +55,7 @@ export const warehouseToSupplierSlice = createSlice({
     updateWTSsupplierId: (state, action: PayloadAction<string>) => {
       state.wTSsupplierId = action.payload;
     },
-    updateWTSWarehouseAddress: (state, action: PayloadAction<string>) => {
-      state.wTSaddress = action.payload;
-    },
+
     updateWTSProductName: (state, action: PayloadAction<string>) => {
       state.wTSproductName = action.payload;
     },
@@ -101,6 +101,9 @@ export const warehouseToSupplierSlice = createSlice({
     updateWTSLogisticsEstimatedTotal: (state, action: PayloadAction<number>) => {
       state.wTSlogisticsEstimatedTotal = action.payload;
     },
+    updateWTSsupplierAccepts: (state, action: PayloadAction<boolean>) => {
+      state.wTSsupplierAccepts = action.payload;
+    },
   },
 });
 
@@ -111,7 +114,7 @@ export const warehouseToSupplierSlice = createSlice({
 export const {
   updateWTSSupplierName,
   updateWTSsupplierId,
-  updateWTSWarehouseAddress,
+
   updateWTSProductName,
   updateWTSProductId,
   updateWTSProductQuantity,
@@ -127,6 +130,7 @@ export const {
   updateWTSLogisticsSubtotal,
   updateWTSLogisticsEstimatedTax,
   updateWTSLogisticsEstimatedTotal,
+  updateWTSsupplierAccepts,
 } = warehouseToSupplierSlice.actions;
 
 export default warehouseToSupplierSlice.reducer;

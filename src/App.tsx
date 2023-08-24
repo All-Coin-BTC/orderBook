@@ -19,6 +19,8 @@ import WarehouseGenerateStepThree from "./Pages/Warehouse/WarehouseGenerateOrder
 import WarehouseReviewPage from "./Pages/Warehouse/WarehouseGenerateOrder/WarehouseReviewPage";
 import WarehouseCompleteInvoice from "./Pages/Warehouse/WarehouseGenerateOrder/WarehouseCompleteInvoice";
 import WarehouseOrders from "./Pages/Warehouse/WarehouseOrders";
+import LogisticsHub from "./Pages/LogisticsHub";
+import LogisticsPotentialOrders from "./Pages/Logistics/LogisticsPotentialOrders";
 
 function App() {
   const [displayMobileMenu, setDisplayMobileMenu] = useState<boolean>(false);
@@ -43,6 +45,8 @@ function App() {
         {!displayMobileMenu && <Route path="/warehouse-review-page" element={<WarehouseReviewPage />} />}
         {!displayMobileMenu && <Route path="/warehouse-complete-invoice" element={<WarehouseCompleteInvoice />} />}
         {!displayMobileMenu && <Route path="/warehouse-orders" element={<WarehouseOrders />} />}
+        {!displayMobileMenu && <Route path="/logistics-hub" element={<LogisticsHub />} />}
+        {!displayMobileMenu && <Route path="/logistics-potential-orders" element={<LogisticsPotentialOrders />} />}
       </Routes>
     </>
   );

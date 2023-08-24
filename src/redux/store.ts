@@ -3,12 +3,14 @@ import supplierReducer from "./supplierView/supplierToWarehouse";
 import warehouseViewOrdersReducer from "./viewOpenDistributionRequests";
 import warehouseToSupplierReducer from "./warehouseView/WarehouseToSupplier";
 import supplierViewOrdersReducer from "./viewOpenBuyRequests";
+import logisticsViewOrdersReducer from "./viewAcceptedOrders";
 export const store = configureStore({
   reducer: {
     supplier: supplierReducer,
     warehouseView: warehouseViewOrdersReducer /*Displays the distribution orders for the warehouse to see */,
     warehouseToSupplier: warehouseToSupplierReducer,
     supplierView: supplierViewOrdersReducer /*displays the buy orders for the supplier to see */,
+    acceptedDeals: logisticsViewOrdersReducer,
   },
 });
 

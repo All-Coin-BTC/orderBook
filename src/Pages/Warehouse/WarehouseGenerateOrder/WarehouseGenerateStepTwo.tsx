@@ -16,7 +16,7 @@ export default function WarehouseGenerateStepTwo() {
   const {
     wTSname,
     wTSsupplierId,
-    wTSaddress,
+
     wTSpricePerUnit,
     wTSproductQuantity,
     wTSproductSubTotal,

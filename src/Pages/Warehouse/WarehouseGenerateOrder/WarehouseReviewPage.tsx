@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import type { RootState } from "../../../redux/store";
 import { useDispatch } from "react-redux";
-import { updateOpenRequests } from "../../../redux/viewOpenDistributionRequests";
+
 import { updateOpenBuyRequests } from "../../../redux/viewOpenBuyRequests";
 export default function WarehouseReviewPage() {
   const {
     wTSname,
     wTSsupplierId,
-    wTSaddress,
+
     wTSproductName,
     wTSproductId,
     wTSproductQuantity,
@@ -25,6 +25,7 @@ export default function WarehouseReviewPage() {
     wTSlogisticsSubtotal,
     wTSlogisticsEstimatedTax,
     wTSlogisticsEstimatedTotal,
+    wTSsupplierAccepts,
   } = useSelector((state: RootState) => state.warehouseToSupplier);
 
   const dispatch = useDispatch();
@@ -76,7 +77,7 @@ export default function WarehouseReviewPage() {
         <div className="text-center font-bold mt-4 ">Logistics Details</div>
         <div className="review-field-five mt-4 flex justify-between items-center gap-1">
           <div>Trip Distance</div>
-          <div>${wTStotalMileage}</div>
+          <div>{wTStotalMileage}</div>
         </div>
         <div className="review-field-five mt-4 flex justify-between items-center gap-1">
           <div>Logistics Provider Premium</div>
@@ -108,7 +109,7 @@ export default function WarehouseReviewPage() {
                   {
                     wTSname: wTSname,
                     wTSsupplierId: wTSsupplierId,
-                    wTSaddress: wTSaddress,
+
                     wTSproductName: wTSproductName,
                     wTSproductId: wTSproductId,
                     wTSproductQuantity: wTSproductQuantity,
@@ -124,6 +125,7 @@ export default function WarehouseReviewPage() {
                     wTSlogisticsSubtotal: wTSlogisticsSubtotal,
                     wTSlogisticsEstimatedTax: wTSlogisticsEstimatedTax,
                     wTSlogisticsEstimatedTotal: wTSlogisticsEstimatedTotal,
+                    wTSsupplierAccepts: wTSsupplierAccepts,
                   },
                 ])
               )
