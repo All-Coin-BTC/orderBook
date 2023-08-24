@@ -4,21 +4,14 @@ type NavbarProps = {
   displayMobileMenu: boolean;
   setDisplayMobileMenu: (params: boolean) => void;
 };
-export const Navbar = ({
-  displayMobileMenu,
-  setDisplayMobileMenu,
-}: NavbarProps) => {
-  const [displayCustomersLinks, setDisplayCustomersLinks] =
-    useState<boolean>(false);
-  const [displayManufacturersLinks, setDisplayManufacturersLinks] =
-    useState<boolean>(false);
-  const [displayWarehousesLinks, setDisplayWarehousesLinks] =
-    useState<boolean>(false);
-  const [displayLogisticsLinks, setDisplayLogisticsLink] =
-    useState<boolean>(false);
+export const Navbar = ({ displayMobileMenu, setDisplayMobileMenu }: NavbarProps) => {
+  const [displayCustomersLinks, setDisplayCustomersLinks] = useState<boolean>(false);
+  const [displayManufacturersLinks, setDisplayManufacturersLinks] = useState<boolean>(false);
+  const [displayWarehousesLinks, setDisplayWarehousesLinks] = useState<boolean>(false);
+  const [displayLogisticsLinks, setDisplayLogisticsLink] = useState<boolean>(false);
   return (
     <>
-      <div className="navbar px-4 py-4 flex justify-between bg-white mb-8">
+      <div className="navbar px-4 py-4 flex justify-between bg-white ">
         <div className="navbar-left flex items-center">
           <Link to="/" onClick={() => setDisplayMobileMenu(false)}>
             <img className="w-8 h-8" src="/auction.png" alt="" />
@@ -37,62 +30,36 @@ export const Navbar = ({
         </div>
       </div>
       {displayMobileMenu && (
-        <div className="mobile-hamburger-display w-screen h-screen flex flex-col items-center">
-          <Link to="/manufacturer-hub">
-            <div
-              className="customers-hamburger-item text-xl font-light mt-6 flex items-center gap-3 cursor-pointer"
-              onClick={() => setDisplayMobileMenu(false)}
-            >
-              <p>Manufacturers</p>
-              {/* <img className="w-4 h-4" src="/down-arrow.png" alt="" /> */}
+        <div className="mobile-hamburger-display w-screen h-screen flex flex-col items-center gap-6 mt-8">
+          <div className="what-we-offer bg-white rounded-2xl w-80 px-12 mx-6 py-4 flex justify-between items-center">
+            <p className="flex">What We Offer</p>
+            <img className="w-8" src="/down-arrow.png" />
+          </div>
+          <div className="who-we-serve bg-white rounded-2xl w-80 px-12 mx-6 py-4 flex justify-between items-center">
+            <p className="flex">Who We Serve</p>
+            <img className="w-8" src="/down-arrow.png" />
+          </div>
+          <div className="why-us bg-white rounded-2xl w-80 px-12 mx-6 py-4 flex justify-between items-center">
+            <p className="flex">Why OrderBook?</p>
+            <img className="w-8" src="/down-arrow.png" />
+          </div>
+          <div className="documentation bg-white rounded-2xl w-80 px-12 mx-6 py-4 flex justify-between items-center">
+            <p className="flex">Documentation</p>
+            <img className="w-8" src="/down-arrow.png" />
+          </div>
+          <div className="account-area flex flex-col gap-2">
+            <div className="create-account bg-transparent rounded-2xl w-80 mx-6  flex justify-center items-center">
+              <Link to="/create-account" onClick={() => setDisplayMobileMenu(false)}>
+                <button className="border-solid border-2 border-indigo-600 w-80 py-4 mx-30 rounded-2xl">
+                  Create Account
+                </button>
+              </Link>
             </div>
-          </Link>
-          <div
-            className={`${
-              displayManufacturersLinks
-                ? "manufacturers-dropdown-container-active text-center font-light text-grayText"
-                : "manufacturers-dropdown-container-inactive"
-            }`}
-          >
-            <p>Create Invoice</p>
-            <p>Invoice History</p>
-            <p>Outstanding Invoices</p>
-          </div>
-          <div
-            className="customers-hamburger-item text-xl font-light mt-6 flex items-center gap-3 cursor-pointer"
-            onClick={() => setDisplayWarehousesLinks(!displayWarehousesLinks)}
-          >
-            <p>Warehouses</p>
-            {/* <img className="w-4 h-4" src="/down-arrow.png" alt="" /> */}
-          </div>
-          <div
-            className={`${
-              displayWarehousesLinks
-                ? "warehouses-dropdown-container-active text-center font-light text-grayText"
-                : "warehouses-dropdown-container-inactive"
-            }`}
-          >
-            <p>List Products for Sale</p>
-            <p>Sales History</p>
-            <p>Open Orders</p>
-          </div>
-          <div
-            className="logistics-hamburger-item text-xl font-light mt-6 flex items-center gap-3 cursor-pointer"
-            onClick={() => setDisplayLogisticsLink(!displayLogisticsLinks)}
-          >
-            <p>Logistics</p>
-            {/* <img className="w-4 h-4" src="/down-arrow.png" alt="" /> */}
-          </div>
-          <div
-            className={`${
-              displayLogisticsLinks
-                ? "warehouses-dropdown-container-active text-center font-light text-grayText"
-                : "warehouses-dropdown-container-inactive"
-            }`}
-          >
-            <p>Example</p>
-            <p>Two</p>
-            <p>Dummy3</p>
+            <div className="sign-in bg-transparent rounded-2xl w-80 mx-6  flex justify-center items-center ">
+              <button className="border-solid border-2 border-indigo-600 w-80 py-4 mx-30 rounded-2xl bg-indigo-600 text-white">
+                Sign In
+              </button>
+            </div>
           </div>
         </div>
       )}

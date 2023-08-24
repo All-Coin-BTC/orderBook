@@ -21,6 +21,7 @@ import WarehouseCompleteInvoice from "./Pages/Warehouse/WarehouseGenerateOrder/W
 import WarehouseOrders from "./Pages/Warehouse/WarehouseOrders";
 import LogisticsHub from "./Pages/LogisticsHub";
 import LogisticsPotentialOrders from "./Pages/Logistics/LogisticsPotentialOrders";
+import CreateAccount from "./Components/CreateAccount";
 
 function App() {
   const [displayMobileMenu, setDisplayMobileMenu] = useState<boolean>(false);
@@ -28,6 +29,7 @@ function App() {
     <>
       <Navbar displayMobileMenu={displayMobileMenu} setDisplayMobileMenu={setDisplayMobileMenu} />
       <Routes>
+        {!displayMobileMenu && <Route path="/create-account" element={<CreateAccount />} />}
         {!displayMobileMenu && <Route path="/" element={<Homepage />} />}
         {!displayMobileMenu && <Route path="/roles" element={<ChooseRole />} />}
         {!displayMobileMenu && <Route path="/supplier-hub" element={<SupplierHub />} />}
