@@ -11,15 +11,15 @@ export default function WarehouseOrders() {
         <div className="open-order-card px-8 py-4 flex flex-col mt-4 rounded-2xl">
           <h1 className="text-center font-bold">Order #{i}</h1>
           <div className="flex justify-between mt-4">
-            <p>Warehouse Name</p>
+            <p>Supplier Name</p>
             <p>{openBuyRequests[i].wTSname}</p>
           </div>
           <div className="flex justify-between mt-4">
-            <p>Warehouse ID</p>
+            <p>Supplier ID</p>
             <p>{openBuyRequests[i].wTSsupplierId}</p>
           </div>
           <div className="flex justify-between mt-4">
-            <p>Warehouse Address</p>
+            <p>Supplier Address</p>
             <p>{openBuyRequests[i].wTSaddress}</p>
           </div>
           <div className="flex justify-between mt-4">
