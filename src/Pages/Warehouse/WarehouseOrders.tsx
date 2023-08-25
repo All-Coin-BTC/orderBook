@@ -9,12 +9,15 @@ export default function WarehouseOrders() {
   const { acceptedOrders } = useSelector((state: RootState) => state.acceptedDeals);
   const dispatch = useDispatch();
 
-  function handleSupplierAccept(arr: Array<any>) {
+  function handleSupplierAccept(arr: Array<any>, id: any, i: number) {
+    dispatch(updateAcceptedOrders([...acceptedOrders, openBuyRequests[i]]));
+
     let newArray = arr.filter((obj) => {
-      return obj.wTSorderId != 1;
+      return obj.wTSorderId != id;
     });
 
     dispatch(updateOpenBuyRequests(newArray));
+    console.log(acceptedOrders, openBuyRequests);
   }
 
   return (
@@ -55,7 +58,10 @@ export default function WarehouseOrders() {
             <p>{(openBuyRequests[i].wTSproductEstimatedTotal + openBuyRequests[i].wTSlogisticsEstimatedTotal).toFixed(2)}</p>
           </div>
           <div className=" flex justify-center items-center mt-4">
-            <button className="supplier-accepts-button" onClick={() => handleSupplierAccept(openBuyRequests)}>
+            <button
+              className="supplier-accepts-button"
+              onClick={() => handleSupplierAccept(openBuyRequests, openBuyRequests[i].wTSorderId, i)}
+            >
               Accept Transaction
             </button>
           </div>

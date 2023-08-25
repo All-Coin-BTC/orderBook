@@ -1,13 +1,26 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
+import { updateLogisticsDeliveryOrders } from "../../redux/viewLogisticsDeliveryOrders";
+import { updateAcceptedOrders } from "../../redux/viewAcceptedOrders";
 
 export default function LogisticsPotentialOrders() {
+  const { logisticsDeliveryOrders } = useSelector((state: RootState) => state.logisticsDeliveryDeals);
   const { acceptedOrders } = useSelector((state: RootState) => state.acceptedDeals);
+  const dispatch = useDispatch();
+  function handleLogisticsAccept(arr: Array<any>, id: any, i: number) {
+    dispatch(updateLogisticsDeliveryOrders([...logisticsDeliveryOrders, acceptedOrders[i]]));
+
+    let newArray = arr.filter((obj) => {
+      return obj.wTSorderId != id;
+    });
+
+    dispatch(updateAcceptedOrders(newArray));
+  }
   return (
     <div className="flex flex-col px-6 font-light">
       {acceptedOrders.map((item, i) => (
-        <div className="open-order-card px-8 py-4 flex flex-col mt-4 rounded-2xl">
+        <div key={acceptedOrders[i].wTSorderId} className="open-order-card px-8 py-4 flex flex-col mt-4 rounded-2xl">
           <h1 className="text-center font-bold">Order #{i}</h1>
           <div className="flex justify-between mt-4">
             <p>Supplier Name</p>
@@ -42,7 +55,12 @@ export default function LogisticsPotentialOrders() {
             <p>{acceptedOrders[i].wTSlogisticsEstimatedTotal}</p>
           </div>
 
-          <div className=" flex justify-center items-center mt-4">Accept Delivery</div>
+          <button
+            className="supplier-accepts-btn"
+            onClick={() => handleLogisticsAccept(acceptedOrders, acceptedOrders[i].wTSorderId, i)}
+          >
+            Accept Delivery
+          </button>
         </div>
       ))}
     </div>

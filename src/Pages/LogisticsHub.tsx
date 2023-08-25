@@ -17,7 +17,7 @@ export default function LogisticsHub() {
           </div>
         </div>
       </Link>
-      <Link to="/logistics-orders">
+      <Link to="/logistics-delivery-orders">
         <div className="generate-request-container mt-4 p-8 rounded-2xl ">
           <div className="request-title">
             <p className="text-2xl text-center">View Your Transport Orders</p>

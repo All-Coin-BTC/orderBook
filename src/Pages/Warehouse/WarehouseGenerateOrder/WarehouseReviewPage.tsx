@@ -107,7 +107,7 @@ export default function WarehouseReviewPage() {
                 updateOpenBuyRequests([
                   ...openBuyRequests,
                   {
-                    wTSorderId: Math.floor(Math.random() * 2),
+                    wTSorderId: Math.floor(Math.random() * 100),
                     wTSname: wTSname,
                     wTSsupplierId: wTSsupplierId,
                     wTSproductName: wTSproductName,
