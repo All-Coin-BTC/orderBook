@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 /*wTS/WTS means warehouse to supplier. Only doing this so we have a different naming convention between supplier sent and warehouse sent orders. */
 export interface warehouseToSupplierData {
+  wTSorderId: string;
   wTSname: string;
   wTSsupplierId: string;
 
@@ -24,6 +25,7 @@ export interface warehouseToSupplierData {
 }
 
 const initialState: warehouseToSupplierData = {
+  wTSorderId: "",
   wTSname: "",
   wTSsupplierId: "",
 
@@ -49,6 +51,9 @@ export const warehouseToSupplierSlice = createSlice({
   name: "warehouseToSupplierData",
   initialState,
   reducers: {
+    updateWTSorderId: (state, action: PayloadAction<string>) => {
+      state.wTSname = action.payload;
+    },
     updateWTSSupplierName: (state, action: PayloadAction<string>) => {
       state.wTSname = action.payload;
     },
@@ -112,9 +117,9 @@ export const warehouseToSupplierSlice = createSlice({
   */
 // Action creators are generated for each case reducer function
 export const {
+  updateWTSorderId,
   updateWTSSupplierName,
   updateWTSsupplierId,
-
   updateWTSProductName,
   updateWTSProductId,
   updateWTSProductQuantity,

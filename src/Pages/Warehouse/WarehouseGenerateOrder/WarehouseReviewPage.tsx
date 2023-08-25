@@ -9,7 +9,6 @@ export default function WarehouseReviewPage() {
   const {
     wTSname,
     wTSsupplierId,
-
     wTSproductName,
     wTSproductId,
     wTSproductQuantity,
@@ -26,6 +25,7 @@ export default function WarehouseReviewPage() {
     wTSlogisticsEstimatedTax,
     wTSlogisticsEstimatedTotal,
     wTSsupplierAccepts,
+    wTSorderId,
   } = useSelector((state: RootState) => state.warehouseToSupplier);
 
   const dispatch = useDispatch();
@@ -107,9 +107,9 @@ export default function WarehouseReviewPage() {
                 updateOpenBuyRequests([
                   ...openBuyRequests,
                   {
+                    wTSorderId: Math.floor(Math.random() * 2),
                     wTSname: wTSname,
                     wTSsupplierId: wTSsupplierId,
-
                     wTSproductName: wTSproductName,
                     wTSproductId: wTSproductId,
                     wTSproductQuantity: wTSproductQuantity,
