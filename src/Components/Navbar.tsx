@@ -20,7 +20,15 @@ export const Navbar = ({ displayMobileMenu, setDisplayMobileMenu }: NavbarProps)
             <div className="logo-text">OrderBook</div>
           </Link>
         </div>
-        <div className="navbar-right flex items-center">
+        <div className="navbar-right flex items-center gap-4">
+          <div>
+            <Link to="/funding-setup">
+              <p>$0.00</p>
+            </Link>
+            <Link to="/funding-setup">
+              <p>Add Funding</p>
+            </Link>
+          </div>
           <img
             className="w-8 h-8"
             src={`${displayMobileMenu ? "/close.png" : "/more.png"}`}
