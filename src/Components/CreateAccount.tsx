@@ -12,7 +12,7 @@ export default function CreateAccount() {
 
   return (
     <div className="create-account-page-container bg-white flex flex-col items-center pt-8 px-4 h-screen">
-      <div className="title text-3xl text-center">Create Your OrderBook Account</div>
+      <div className="title text-4xl text-center">Create Your AllBook Account</div>
       <div className="username text-start w-full font-light mt-4">Username</div>
       <input className="username-input" />
       <div className="password text-start w-full font-light mt-4">Password</div>

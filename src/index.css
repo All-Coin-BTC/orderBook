@@ -58,6 +58,10 @@ input:focus {
   box-shadow: 10px 9px 35px -18px rgba(0, 0, 0, 0.16);
 }
 /*Homepage */
+.homepage-container {
+  height: 84dvh;
+  overflow-y: hidden;
+}
 .get-started-btn {
   -webkit-box-shadow: 5px 5px 43px -18px rgba(0, 0, 0, 0.88);
   -moz-box-shadow: 5px 5px 43px -18px rgba(0, 0, 0, 0.88);

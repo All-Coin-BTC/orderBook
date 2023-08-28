@@ -12,12 +12,12 @@ export const Navbar = ({ displayMobileMenu, setDisplayMobileMenu }: NavbarProps)
   return (
     <>
       <div className="navbar px-4 py-4 flex justify-between bg-white ">
-        <div className="navbar-left flex items-center">
+        <div className="navbar-left flex items-center gap-2">
           <Link to="/" onClick={() => setDisplayMobileMenu(false)}>
-            <img className="w-8 h-8" src="/auction.png" alt="" />
+            <img className="w-12 h-12" src="/Black token.png" alt="" />
           </Link>
           <Link to="/" onClick={() => setDisplayMobileMenu(false)}>
-            <div className="logo-text">OrderBook</div>
+            <div className="logo-text text-xl">AllBook</div>
           </Link>
         </div>
         <div className="navbar-right flex items-center gap-4">
@@ -48,7 +48,7 @@ export const Navbar = ({ displayMobileMenu, setDisplayMobileMenu }: NavbarProps)
             <img className="w-8" src="/down-arrow.png" />
           </div>
           <div className="why-us bg-white rounded-2xl w-80 px-12 mx-6 py-4 flex justify-between items-center">
-            <p className="flex">Why OrderBook?</p>
+            <p className="flex">Why AllBook?</p>
             <img className="w-8" src="/down-arrow.png" />
           </div>
           <div className="documentation bg-white rounded-2xl w-80 px-12 mx-6 py-4 flex justify-between items-center">
