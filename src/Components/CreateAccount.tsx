@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function CreateAccount() {
   const [typeOfAccount, setTypeOfAccount] = useState("");
@@ -11,7 +12,7 @@ export default function CreateAccount() {
   }, [typeOfLogisticsEquipment]);
 
   return (
-    <div className="create-account-page-container bg-white flex flex-col items-center pt-8 px-4 h-screen">
+    <div className="create-account-page-container bg-white flex flex-col items-center pt-8 px-4 h-screen max-w-xl rounded-2xl mt-8 mx-auto">
       <div className="title text-4xl text-center">Create Your AllBook Account</div>
       <div className="username text-start w-full font-light mt-4">Username</div>
       <input className="username-input" />
@@ -50,9 +51,11 @@ export default function CreateAccount() {
       ) : (
         <></>
       )}
-      <button className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 mt-8 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-        Create Account
-      </button>
+      <Link to="/warehouse-hub">
+        <button className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 mt-8 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Create Account
+        </button>
+      </Link>
     </div>
   );
 }

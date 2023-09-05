@@ -1,4 +1,4 @@
-@import url("https://fonts.cdnfonts.com/css/gotham-6");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,7 +14,7 @@ body {
   padding: 0px;
   /* background-color: #f8f6f4; */
   color: black;
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
   padding-bottom: 16px;
   vertical-align: baseline;
@@ -118,14 +118,25 @@ input:focus {
   max-height: 600px;
 }
 
-.right-sidebar {
-  border-left: 1px black solid;
-  width: auto;
+.sidebar-container {
+  width: 400px;
   max-width: 700px;
-  min-width: 300px;
-  padding-left: auto;
+  min-width: 340px;
+  border-left: 1px solid #d4d3d3;
+}
+.side-bar-header {
+  height: 58px;
 }
 
+/*Activity Card */
+.activity-card-container:hover {
+  background-color: aliceblue;
+  cursor: pointer;
+}
+.activty-btn:hover {
+  background-color: rgb(59 130 246);
+  color: white;
+}
 /*Manufacturer Generate Invoice Pages*/
 .enter-warehouse-details-container,
 .enter-manufacture-details-container,
@@ -254,6 +265,12 @@ input:focus {
   color: #161616;
   transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9), outline 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
   overflow: visible;
+}
+.create-account-page-container {
+  -webkit-box-shadow: 5px 5px 20px -8px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 5px 5px 20px -8px rgba(0, 0, 0, 0.33);
+  box-shadow: 5px 5px 20px -8px rgba(0, 0, 0, 0.33);
+  border: 1px solid rgb(0, 0, 0, 0.07);
 }
 
 @media screen and (max-width: 800px) {
