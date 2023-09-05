@@ -16,7 +16,7 @@ export default function WarehousingHub() {
           </div>
         </div>
         <div className="cards-grid grid grid-cols-3 grid-rows-2 gap-8 mt-16 w-full justify-items-center ">
-          <div className="generate-request-container p-8 rounded-2xl items-center flex flex-col justify-between">
+          <div className="generate-request-container p-8 rounded-sm items-center flex flex-col justify-between">
             <div className="top-contents flex flex-col items-center">
               <div className="card-image-container rounded-full bg-slate-300">
                 <img src="create-order.png" className="w-24 p-4" />
@@ -29,11 +29,11 @@ export default function WarehousingHub() {
                 </p>
               </div>
             </div>
-            <button className="card-btn mt-8 border rounded border-green-500 opacity-75 py-4 px-24 transition-all duration-[250ms] ease-out">
+            <button className="card-btn mt-8 border rounded-sm border-green-500 opacity-75 py-4 px-24 transition-all duration-[250ms] ease-out">
               Enter
             </button>
           </div>
-          <div className="view-requests-container  p-8 rounded-2xl items-center flex flex-col justify-between">
+          <div className="view-requests-container  p-8 rounded-sm items-center flex flex-col justify-between">
             <div className="top-contents flex flex-col items-center">
               <div className="card-image-container rounded-full bg-orange-200">
                 <img src="browse.png" className="w-24 p-4" />
@@ -46,11 +46,11 @@ export default function WarehousingHub() {
                 </p>
               </div>
             </div>
-            <button className="card-btn mt-8 border rounded border-green-500 opacity-75 py-4 px-24 transition-all duration-[250ms] ease-out">
+            <button className="card-btn mt-8 border rounded-sm border-green-500 opacity-75 py-4 px-24 transition-all duration-[250ms] ease-out">
               Enter
             </button>
           </div>
-          <div className=" view-orders-request-container p-8 rounded-2xl items-center flex flex-col justify-between">
+          <div className=" view-orders-request-container p-8 rounded-sm items-center flex flex-col justify-between">
             <div className="top-contents flex flex-col items-center">
               <div className="card-image-container rounded-full bg-emerald-300">
                 <img src="orders.png" className="w-24 p-4" />
@@ -63,7 +63,7 @@ export default function WarehousingHub() {
                 </p>
               </div>
             </div>
-            <button className="card-btn mt-8 border rounded border-green-500 opacity-75 py-4 px-24 transition-all duration-[250ms] ease-out">
+            <button className="card-btn mt-8 border rounded-sm border-green-500 opacity-75 py-4 px-24 transition-all duration-[250ms] ease-out">
               Enter
             </button>
           </div>
