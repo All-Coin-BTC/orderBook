@@ -12,7 +12,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #f8f6f4;
+  /* background-color: #f8f6f4; */
   color: black;
   font-family: sans-serif;
   font-weight: 500;
@@ -53,9 +53,10 @@ input:focus {
 
 /*navbar */
 .navbar {
-  -webkit-box-shadow: 10px 9px 35px -18px rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 10px 9px 35px -18px rgba(0, 0, 0, 0.16);
-  box-shadow: 10px 9px 35px -18px rgba(0, 0, 0, 0.16);
+  border-bottom: 1px solid #d4d3d3;
+}
+.hamburger-icon {
+  display: none;
 }
 /*Homepage */
 .homepage-container {
@@ -85,7 +86,12 @@ input:focus {
   border-radius: 16px;
 }
 
-/*Manufacturer */
+/*Warehousing Hub */
+.card-btn:hover {
+  background-color: green;
+  color: white;
+}
+/*Supplier/Warheouse hubs */
 .issue-invoice-container {
   padding: 16px;
   background-color: white;
@@ -99,12 +105,25 @@ input:focus {
   border-radius: 16px;
 }
 .generate-request-container,
-.view-requests-container {
-  max-width: 320px;
+.view-requests-container,
+.view-orders-request-container,
+.view-sent-distribution-requests-container {
+  min-width: 260px;
   background: white;
-  -webkit-box-shadow: 3px 3px 21px -7px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 3px 3px 21px -7px rgba(0, 0, 0, 0.35);
-  box-shadow: 3px 3px 21px -7px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 2px 2px 15px -3px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 2px 2px 15px -3px rgba(0, 0, 0, 0.24);
+  box-shadow: 2px 2px 15px -3px rgba(0, 0, 0, 0.24);
+  max-width: 600px;
+  height: 600px;
+  max-height: 600px;
+}
+
+.right-sidebar {
+  border-left: 1px black solid;
+  width: auto;
+  max-width: 700px;
+  min-width: 300px;
+  padding-left: auto;
 }
 
 /*Manufacturer Generate Invoice Pages*/
@@ -235,4 +254,19 @@ input:focus {
   color: #161616;
   transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9), outline 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
   overflow: visible;
+}
+
+@media screen and (max-width: 800px) {
+  .hamburger-icon {
+    display: flex;
+  }
+  .navbar-middle {
+    display: none;
+  }
+  .funding-container {
+    display: none;
+  }
+  .profile-container {
+    display: none;
+  }
 }
