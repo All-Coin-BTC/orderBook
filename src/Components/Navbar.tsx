@@ -28,7 +28,7 @@ export const Navbar = ({ displayMobileMenu, setDisplayMobileMenu }: NavbarProps)
                 Dashboard
               </Link>
               <Link to="/warehouse-hub" onClick={() => setDisplayMobileMenu(false)}>
-                Orders
+                Hub
               </Link>
               <Link to="/contact" onClick={() => setDisplayMobileMenu(false)}>
                 Contact

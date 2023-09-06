@@ -29,9 +29,11 @@ export default function WarehousingHub() {
                 </p>
               </div>
             </div>
-            <button className="card-btn mt-8 border rounded-sm border-green-500 opacity-75 py-4 px-24 transition-all duration-[250ms] ease-out">
-              Enter
-            </button>
+            <Link to="/warehouse-generate-step-one">
+              <button className="card-btn mt-8 border rounded-sm border-green-500 opacity-75 py-4 px-24 transition-all duration-[250ms] ease-out">
+                Enter
+              </button>
+            </Link>
           </div>
           <div className="view-requests-container  p-8 rounded-sm items-center flex flex-col justify-between">
             <div className="top-contents flex flex-col items-center">
@@ -46,9 +48,11 @@ export default function WarehousingHub() {
                 </p>
               </div>
             </div>
-            <button className="card-btn mt-8 border rounded-sm border-green-500 opacity-75 py-4 px-24 transition-all duration-[250ms] ease-out">
-              Enter
-            </button>
+            <Link to="/supplier-orders">
+              <button className="card-btn mt-8 border rounded-sm border-green-500 opacity-75 py-4 px-24 transition-all duration-[250ms] ease-out">
+                Enter
+              </button>
+            </Link>
           </div>
           <div className=" view-orders-request-container p-8 rounded-sm items-center flex flex-col justify-between">
             <div className="top-contents flex flex-col items-center">
