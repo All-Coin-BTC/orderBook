@@ -14,9 +14,9 @@ export const Navbar = ({ displayMobileMenu, setDisplayMobileMenu }: NavbarProps)
     <>
       <div className="navbar px-6 py-6 flex justify-between bg-white ">
         <div className="navbar-left flex gap-12 items-center">
-          <div className="navbar-brand flex items-center gap-2">
+          <div className="navbar-brand flex items-center gap-2 flex-shrink-0">
             <Link to="/" onClick={() => setDisplayMobileMenu(false)}>
-              <img className="w-12 h-12" src="/Black token.png" alt="" />
+              <img className="w-12 h-12 flex-shrink-0" src="/Black token.png" alt="" />
             </Link>
             <Link to="/" onClick={() => setDisplayMobileMenu(false)}>
               <div className="logo-text text-xl">AllBook</div>
@@ -33,6 +33,9 @@ export const Navbar = ({ displayMobileMenu, setDisplayMobileMenu }: NavbarProps)
               <Link to="/contact" onClick={() => setDisplayMobileMenu(false)}>
                 Contact
               </Link>
+              <Link to="/supplier-hub">Supplier View (Temporary)</Link>
+              <Link to="/warehouse-hub">Warehouse View (Temporary)</Link>
+              <Link to="/logistics-hub">Logistics View (Temporary)</Link>
             </div>
           )}
         </div>
