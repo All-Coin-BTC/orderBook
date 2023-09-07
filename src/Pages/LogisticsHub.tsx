@@ -24,8 +24,7 @@ export default function LogisticsHub() {
               <div className="request-title  mt-4 flex flex-col gap-12">
                 <p className="text-2xl text-center font-bold ">View Potential Orders</p>
                 <p className="text-center font-light text-lg">
-                  Enter details about your product and price. Other parties may counter-offer. Once an agreement is reached,
-                  your order will be moved to the logistics book where it can be fulfilled.
+                  View orders that are in need of transportation. You may accept or negotiate the fee you will receive here.
                 </p>
               </div>
             </div>
@@ -43,8 +42,8 @@ export default function LogisticsHub() {
               <div className="orders-title  mt-4 flex flex-col gap-12">
                 <p className="text-2xl text-center font-bold ">View Your Transport Orders</p>
                 <p className="text-center font-light text-lg">
-                  View orders that warehouses have sent to you. You can agree to the order terms or propose a counter offer.
-                  Once accepted the order will be pushed to the logistics book for fulfillment.
+                  View the transportation orders that you are responsible for fulfilling. See both current and past
+                  deliveries.
                 </p>
               </div>
             </div>
