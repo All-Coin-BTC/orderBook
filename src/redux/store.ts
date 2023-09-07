@@ -4,6 +4,7 @@ import warehouseViewOrdersReducer from "./viewOpenDistributionRequests";
 import warehouseToSupplierReducer from "./warehouseView/WarehouseToSupplier";
 import supplierViewOrdersReducer from "./viewOpenBuyRequests";
 import logisticsViewOrdersReducer from "./viewAcceptedOrders";
+import logisticsViewDeliveriesReducer from "./viewLogisticsDeliveryOrders";
 export const store = configureStore({
   reducer: {
     supplier: supplierReducer,
@@ -11,6 +12,7 @@ export const store = configureStore({
     warehouseToSupplier: warehouseToSupplierReducer,
     supplierView: supplierViewOrdersReducer /*displays the buy orders for the supplier to see */,
     acceptedDeals: logisticsViewOrdersReducer,
+    logisticsDeliveryDeals: logisticsViewDeliveriesReducer /* Accepted by logistics for delivery */,
   },
 });
 

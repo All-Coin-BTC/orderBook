@@ -22,6 +22,8 @@ import WarehouseOrders from "./Pages/Warehouse/WarehouseOrders";
 import LogisticsHub from "./Pages/LogisticsHub";
 import LogisticsPotentialOrders from "./Pages/Logistics/LogisticsPotentialOrders";
 import CreateAccount from "./Components/CreateAccount";
+import LogisticsAcceptedDeliveryOrders from "./Pages/Logistics/LogisticsAcceptedDeliveryOrders";
+import FundingSetup from "./Components/FundingSetup";
 
 function App() {
   const [displayMobileMenu, setDisplayMobileMenu] = useState<boolean>(false);
@@ -31,6 +33,7 @@ function App() {
       <Routes>
         {!displayMobileMenu && <Route path="/create-account" element={<CreateAccount />} />}
         {!displayMobileMenu && <Route path="/" element={<Homepage />} />}
+        {!displayMobileMenu && <Route path="/funding-setup" element={<FundingSetup />} />}
         {!displayMobileMenu && <Route path="/roles" element={<ChooseRole />} />}
         {!displayMobileMenu && <Route path="/supplier-hub" element={<SupplierHub />} />}
         {!displayMobileMenu && <Route path="/supplier-generate-step-one" element={<SupplierGenerateStepOne />} />}
@@ -49,6 +52,7 @@ function App() {
         {!displayMobileMenu && <Route path="/warehouse-orders" element={<WarehouseOrders />} />}
         {!displayMobileMenu && <Route path="/logistics-hub" element={<LogisticsHub />} />}
         {!displayMobileMenu && <Route path="/logistics-potential-orders" element={<LogisticsPotentialOrders />} />}
+        {!displayMobileMenu && <Route path="/logistics-delivery-orders" element={<LogisticsAcceptedDeliveryOrders />} />}
       </Routes>
     </>
   );

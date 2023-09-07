@@ -1,4 +1,4 @@
-@import url("https://fonts.cdnfonts.com/css/gotham-6");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,12 +12,13 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #f8f6f4;
+  /* background-color: #f8f6f4; */
   color: black;
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
   padding-bottom: 16px;
   vertical-align: baseline;
+  background-color: rgb(243 244 246);
 }
 input {
   box-sizing: border-box;
@@ -53,11 +54,16 @@ input:focus {
 
 /*navbar */
 .navbar {
-  -webkit-box-shadow: 10px 9px 35px -18px rgba(0, 0, 0, 0.16);
-  -moz-box-shadow: 10px 9px 35px -18px rgba(0, 0, 0, 0.16);
-  box-shadow: 10px 9px 35px -18px rgba(0, 0, 0, 0.16);
+  border-bottom: 1px solid #d4d3d3;
+}
+.hamburger-icon {
+  display: none;
 }
 /*Homepage */
+.homepage-container {
+  height: 84dvh;
+  overflow-y: hidden;
+}
 .get-started-btn {
   -webkit-box-shadow: 5px 5px 43px -18px rgba(0, 0, 0, 0.88);
   -moz-box-shadow: 5px 5px 43px -18px rgba(0, 0, 0, 0.88);
@@ -65,6 +71,13 @@ input:focus {
   border: 1px solid rgb(0, 0, 0, 0.07);
 }
 
+/* Funding Setup*/
+.payment-card {
+  background-color: white;
+  -webkit-box-shadow: 4px 4px 17px 0px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 4px 4px 17px 0px rgba(0, 0, 0, 0.22);
+  box-shadow: 4px 4px 17px 0px rgba(0, 0, 0, 0.22);
+}
 /*Role selection */
 .role-container {
   background-color: white;
@@ -74,7 +87,12 @@ input:focus {
   border-radius: 16px;
 }
 
-/*Manufacturer */
+/*Warehousing Hub */
+.card-btn:hover {
+  background-color: green;
+  color: white;
+}
+/*Supplier/Warheouse hubs */
 .issue-invoice-container {
   padding: 16px;
   background-color: white;
@@ -88,14 +106,38 @@ input:focus {
   border-radius: 16px;
 }
 .generate-request-container,
-.view-requests-container {
-  max-width: 320px;
+.view-requests-container,
+.view-orders-request-container,
+.view-sent-distribution-requests-container {
+  min-width: 260px;
   background: white;
-  -webkit-box-shadow: 3px 3px 21px -7px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 3px 3px 21px -7px rgba(0, 0, 0, 0.35);
-  box-shadow: 3px 3px 21px -7px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 2px 2px 15px -3px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 2px 2px 15px -3px rgba(0, 0, 0, 0.24);
+  box-shadow: 2px 2px 15px -3px rgba(0, 0, 0, 0.24);
+  max-width: 640px;
+  height: 600px;
+  max-height: 640px;
 }
 
+.sidebar-container {
+  width: 400px;
+  max-width: 700px;
+  min-width: 340px;
+  border-left: 1px solid #d4d3d3;
+}
+.side-bar-header {
+  height: 58px;
+}
+
+/*Activity Card */
+.activity-card-container:hover {
+  background-color: aliceblue;
+  cursor: pointer;
+}
+.activty-btn:hover {
+  background-color: rgb(59 130 246);
+  color: white;
+}
 /*Manufacturer Generate Invoice Pages*/
 .enter-warehouse-details-container,
 .enter-manufacture-details-container,
@@ -204,4 +246,98 @@ input:focus {
   outline: 2px solid #0f62fe;
   outline-offset: -2px;
   overflow: visible;
+}
+
+.user-category-input {
+  font-size: 12px;
+  vertical-align: baseline;
+  font-weight: 400;
+  line-height: 1.9;
+  letter-spacing: 0.16px;
+
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid gray;
+  background-color: white;
+  padding: 0 16px;
+
+  color: #161616;
+  transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9), outline 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+  overflow: visible;
+}
+.create-account-page-container {
+  -webkit-box-shadow: 5px 5px 20px -8px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 5px 5px 20px -8px rgba(0, 0, 0, 0.33);
+  box-shadow: 5px 5px 20px -8px rgba(0, 0, 0, 0.33);
+  border: 1px solid rgb(0, 0, 0, 0.07);
+}
+@media (max-width: 1024px) {
+  /* .sidebar-container {
+    width: 30px;
+    min-width: 200px;
+  } */
+
+  .generate-request-container,
+  .view-requests-container,
+  .view-orders-request-container,
+  .view-sent-distribution-requests-container {
+    min-width: 260px;
+    background: white;
+    -webkit-box-shadow: 2px 2px 15px -3px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 2px 2px 15px -3px rgba(0, 0, 0, 0.24);
+    box-shadow: 2px 2px 15px -3px rgba(0, 0, 0, 0.24);
+    max-width: 640px;
+    height: 600px;
+    max-height: 640px;
+    width: 450px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .hamburger-icon {
+    display: flex;
+  }
+  .navbar-middle {
+    display: none;
+  }
+  .funding-container {
+    display: none;
+  }
+  .profile-container {
+    display: none;
+  }
+
+  .sidebar-container {
+    display: none;
+  }
+  .side-bar-header {
+    height: 43px;
+    padding-bottom: 16px;
+  }
+  .subText {
+    font-size: 10px;
+  }
+  .supplier-hub-container {
+    margin-right: 0px;
+  }
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .generate-request-container,
+  .view-requests-container,
+  .view-orders-request-container,
+  .view-sent-distribution-requests-container {
+    min-width: 100px;
+    background: white;
+    -webkit-box-shadow: 2px 2px 15px -3px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 2px 2px 15px -3px rgba(0, 0, 0, 0.24);
+    box-shadow: 2px 2px 15px -3px rgba(0, 0, 0, 0.24);
+    max-width: 500px;
+    height: 600px;
+    max-height: 600px;
+    width: 95%;
+  }
 }
