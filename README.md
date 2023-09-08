@@ -4,3 +4,5 @@ The redux is broken down essentially the same way. Under supplierView, those are
 
 The redux files supplierToWarehouse and WarehouseToSupplier represent which way the data is flowing. supplierToWarehouse is a request to sell goods to a warehouse.
 WarehouseToSupplier is a request to buy goods from a supplier.
+
+<!-- // working ?s -->
