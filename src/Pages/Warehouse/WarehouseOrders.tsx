@@ -13,7 +13,7 @@ export default function WarehouseOrders() {
     dispatch(updateAcceptedOrders([...acceptedOrders, openBuyRequests[i]]));
 
     let newArray = arr.filter((obj) => {
-      return obj.wTSorderId != id;
+      return obj.wTSorderId !== id;
     });
 
     dispatch(updateOpenBuyRequests(newArray));

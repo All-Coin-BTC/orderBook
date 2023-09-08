@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 export default function Homepage() {
   return (
-    <div className="homepage-container flex flex-col  items-center justify-center relative">
+    <div className="z-10 homepage-container flex flex-col  items-center justify-center relative">
       <div className="hero-container flex flex-col justify-center items-center">
         <div className="hero-header text-5xl text-center p-2 ">Experience A Liberated Marketplace</div>
         <div className="hero-subtext text-2xl font-extralight text-center">
