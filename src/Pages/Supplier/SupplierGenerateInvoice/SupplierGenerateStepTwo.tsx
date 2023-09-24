@@ -33,9 +33,7 @@ export default function SupplierGenerateStepTwo() {
   }, [productSubTotal]);
 
   useEffect(() => {
-    dispatch(
-      updateProductEstimatedTotal(productSubTotal + productEstimatedTax)
-    );
+    dispatch(updateProductEstimatedTotal(productSubTotal + productEstimatedTax));
   }, [productEstimatedTax, productSubTotal]);
   console.log(pricePerUnit, productQuantity, productSubTotal);
   return (
@@ -56,13 +54,8 @@ export default function SupplierGenerateStepTwo() {
           <div className="flex flex-col space-y-7">
             <div>
               <h1 className="mt-6 title text-2xl font-semibold">Step 2</h1>
-<<<<<<< HEAD
+
               <h3 className="subtitle text-[1rem] font-light">Enter Product Shipment Details</h3>
-=======
-              <h3 className="subtitle text-[1rem] font-light">
-                Enter Product Shipment Details
-              </h3>
->>>>>>> a9791f94cbab3e20b655a6349f1726f971a80212
             </div>
 
             <div className="font-light flex flex-col space-y-4 justify-between items-start gap-1">
@@ -91,13 +84,7 @@ export default function SupplierGenerateStepTwo() {
                 placeholder="Quantity"
                 type="number"
                 value={productQuantity}
-<<<<<<< HEAD
                 onChange={(e) => dispatch(updateProductQuantity(parseFloat(e.target.value)))}
-=======
-                onChange={(e) =>
-                  dispatch(updateProductQuantity(parseFloat(e.target.value)))
-                }
->>>>>>> a9791f94cbab3e20b655a6349f1726f971a80212
               />
               <input
                 className="text-[0.9rem] px-3 text-left border placeholder:text-gray-600 border-gray-400 bg-white shadow-sm"
@@ -105,13 +92,7 @@ export default function SupplierGenerateStepTwo() {
                 placeholder="Price Per Unit"
                 type="number"
                 value={pricePerUnit}
-<<<<<<< HEAD
                 onChange={(e) => dispatch(updatePricePerUnit(parseFloat(e.target.value)))}
-=======
-                onChange={(e) =>
-                  dispatch(updatePricePerUnit(parseFloat(e.target.value)))
-                }
->>>>>>> a9791f94cbab3e20b655a6349f1726f971a80212
               />
             </div>
             <div className="shipment-subtotal mt-4 flex justify-between items-center gap-1">

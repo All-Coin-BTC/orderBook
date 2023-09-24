@@ -27,9 +27,7 @@ export default function SupplierReviewPage() {
     logisticsEstimatedTotal,
   } = useSelector((state: RootState) => state.supplier);
   const dispatch = useDispatch();
-  const { openRequests } = useSelector(
-    (state: RootState) => state.warehouseView
-  );
+  const { openRequests } = useSelector((state: RootState) => state.warehouseView);
   console.log(openRequests);
   return (
     <div className="h-[87vh] text-start sm:flex flex-col items-center justify-center">
@@ -40,13 +38,8 @@ export default function SupplierReviewPage() {
       >
         <div>
           <h1 className="title text-2xl font-semibold text-center">Review</h1>
-<<<<<<< HEAD
+
           <h3 className="subtitle text-lg font-light text-center">Validate Transaction Details</h3>
-=======
-          <h3 className="subtitle text-lg font-light text-center">
-            Validate Transaction Details
-          </h3>
->>>>>>> a9791f94cbab3e20b655a6349f1726f971a80212
         </div>
 
         <main className="flex justify-between space-x-16 px-10 items-start border-y border-gray-100 w-full">
@@ -118,13 +111,8 @@ export default function SupplierReviewPage() {
             </div>
             <div className="grand-total mt-4 flex justify-between items-center gap-1 border-t py-8">
               <div>Grand Total</div>
-<<<<<<< HEAD
+
               <div>${(logisticsEstimatedTotal + productEstimatedTotal).toFixed(2)}</div>
-=======
-              <div>
-                ${(logisticsEstimatedTotal + productEstimatedTotal).toFixed(2)}
-              </div>
->>>>>>> a9791f94cbab3e20b655a6349f1726f971a80212
             </div>
           </article>
         </main>
@@ -150,8 +138,7 @@ export default function SupplierReviewPage() {
                     supplierLocation: supplierLocation,
                     warehouseLocation: warehouseLocation,
                     totalMileage: totalMileage,
-                    maximumAcceptableDeliveryTime:
-                      maximumAcceptableDeliveryTime,
+                    maximumAcceptableDeliveryTime: maximumAcceptableDeliveryTime,
                     logisticsProviderPremium: logisticsProviderPremium,
                     logisticsSubtotal: logisticsSubtotal,
                     logisticsEstimatedTax: logisticsEstimatedTax,
