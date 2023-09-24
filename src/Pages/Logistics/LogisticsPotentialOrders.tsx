@@ -55,13 +55,14 @@ export default function LogisticsPotentialOrders() {
             <p>Logistics Estimated Total</p>
             <p>{acceptedOrders[i].wTSlogisticsEstimatedTotal}</p>
           </div>
-
-          <button
-            className="supplier-accepts-btn"
-            onClick={() => handleLogisticsAccept(acceptedOrders, acceptedOrders[i].wTSorderId, i)}
-          >
-            Accept Delivery
-          </button>
+          <div className=" flex justify-center items-center mt-4">
+            <button
+              className="supplier-accepts-button "
+              onClick={() => handleLogisticsAccept(acceptedOrders, acceptedOrders[i].wTSorderId, i)}
+            >
+              Accept Delivery
+            </button>
+          </div>
         </div>
       ))}
     </div>
