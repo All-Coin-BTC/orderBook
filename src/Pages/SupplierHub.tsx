@@ -30,7 +30,7 @@ export default function SupplierHub() {
               </div>
             </div>
             <Link to="/supplier-generate-step-one">
-              <button className="ard-btn mt-8 border rounded-sm border-green-500 opacity-75 py-4 px-24 transition-all duration-[250ms] ease-out">
+              <button className="card-btn mt-8 border rounded-sm border-green-500 opacity-75 py-4 px-24 transition-all duration-[250ms] ease-out">
                 Enter
               </button>
             </Link>
