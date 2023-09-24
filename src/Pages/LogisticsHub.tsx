@@ -18,7 +18,7 @@ export default function LogisticsHub() {
         <div className="cards-grid grid 2xl:grid-cols-3 xl:grid-cols-2 grid-rows-2 gap-8 mt-16 w-full justify-items-center ">
           <div className="generate-request-container p-8 rounded-sm items-center flex flex-col justify-between">
             <div className="top-contents flex flex-col items-center">
-              <div className="card-image-container rounded-full bg-orange-200">
+              <div className="card-image-container rounded-full bg-slate-400">
                 <img src="create-order.png" className="w-24 p-4" />
               </div>
               <div className="request-title  mt-4 flex flex-col gap-12">
@@ -28,15 +28,15 @@ export default function LogisticsHub() {
                 </p>
               </div>
             </div>
-            <Link to="/supplier-generate-step-one">
-              <button className="ard-btn mt-8 border rounded-sm border-green-500 opacity-75 py-4 px-24 transition-all duration-[250ms] ease-out">
+            <Link to="/logistics-potential-orders">
+              <button className="card-btn mt-8 border rounded-sm border-green-500 opacity-75 py-4 px-24 transition-all duration-[250ms] ease-out">
                 Enter
               </button>
             </Link>
           </div>
           <div className="view-orders-request-container  p-8 rounded-sm items-center flex flex-col justify-between">
             <div className="top-contents flex flex-col items-center">
-              <div className="card-image-container rounded-full bg-green-500">
+              <div className="card-image-container rounded-full bg-lime-400">
                 <img src="inTransit.png" className="w-24 p-4" />
               </div>
               <div className="orders-title  mt-4 flex flex-col gap-12">
@@ -47,7 +47,7 @@ export default function LogisticsHub() {
                 </p>
               </div>
             </div>
-            <Link to="/warehouse-orders">
+            <Link to="/logistics-delivery-orders">
               <button className="card-btn mt-8 border rounded-sm border-green-500 opacity-75 py-4 px-24 transition-all duration-[250ms] ease-out">
                 Enter
               </button>

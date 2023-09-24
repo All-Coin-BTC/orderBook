@@ -8,6 +8,7 @@ export default function LogisticsPotentialOrders() {
   const { logisticsDeliveryOrders } = useSelector((state: RootState) => state.logisticsDeliveryDeals);
   const { acceptedOrders } = useSelector((state: RootState) => state.acceptedDeals);
   const dispatch = useDispatch();
+
   function handleLogisticsAccept(arr: Array<any>, id: any, i: number) {
     dispatch(updateLogisticsDeliveryOrders([...logisticsDeliveryOrders, acceptedOrders[i]]));
 
