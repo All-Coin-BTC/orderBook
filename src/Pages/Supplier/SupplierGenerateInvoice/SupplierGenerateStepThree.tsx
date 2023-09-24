@@ -29,7 +29,9 @@ export default function SupplierGenerateStepThree() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(updateLogisticsSubtotal(totalMileage * 2 + logisticsProviderPremium));
+    dispatch(
+      updateLogisticsSubtotal(totalMileage * 2 + logisticsProviderPremium)
+    );
   }, [totalMileage, logisticsProviderPremium]);
 
   useEffect(() => {
@@ -37,7 +39,9 @@ export default function SupplierGenerateStepThree() {
   }, [logisticsSubtotal]);
 
   useEffect(() => {
-    dispatch(updateLogisticsEstimatedTotal(logisticsSubtotal + logisticsEstimatedTax));
+    dispatch(
+      updateLogisticsEstimatedTotal(logisticsSubtotal + logisticsEstimatedTax)
+    );
   }, [logisticsEstimatedTax, logisticsSubtotal]);
 
   return (
@@ -56,7 +60,13 @@ export default function SupplierGenerateStepThree() {
           <div className="flex flex-col space-y-7">
             <div>
               <h1 className="mt-6 title text-2xl font-semibold">Step 3</h1>
+<<<<<<< HEAD
               <h3 className="subtitle text-[1rem] font-light">Enter Logistics Details</h3>
+=======
+              <h3 className="subtitle text-[1rem] font-light">
+                Enter Logistics Details
+              </h3>
+>>>>>>> a9791f94cbab3e20b655a6349f1726f971a80212
             </div>
             <div className="font-light flex flex-col space-y-4 justify-between items-start gap-1">
               <input
@@ -64,35 +74,71 @@ export default function SupplierGenerateStepThree() {
                 className="text-[0.9rem] px-3 text-left border placeholder:text-gray-600 border-gray-400 bg-white shadow-sm"
                 type="text"
                 value={supplierLocation}
+<<<<<<< HEAD
                 onChange={(e) => dispatch(updateSupplierLocation(e.target.value))}
+=======
+                onChange={(e) =>
+                  dispatch(updateSupplierLocation(e.target.value))
+                }
+>>>>>>> a9791f94cbab3e20b655a6349f1726f971a80212
               />
               <input
                 placeholder="Warehouse Location (Recipient Address)"
                 className="text-[0.9rem] px-3 text-left border placeholder:text-gray-600 border-gray-400 bg-white shadow-sm"
                 type="text"
                 value={warehouseLocation}
+<<<<<<< HEAD
                 onChange={(e) => dispatch(updateWarehouseLocation(e.target.value))}
+=======
+                onChange={(e) =>
+                  dispatch(updateWarehouseLocation(e.target.value))
+                }
+>>>>>>> a9791f94cbab3e20b655a6349f1726f971a80212
               />
               <input
                 className="text-[0.9rem] px-3 text-left border placeholder:text-gray-600 border-gray-400 bg-white shadow-sm"
                 placeholder="Total Miles"
                 type="number"
                 value={totalMileage}
+<<<<<<< HEAD
                 onChange={(e) => dispatch(updateTotalMileage(parseFloat(e.target.value)))}
+=======
+                onChange={(e) =>
+                  dispatch(updateTotalMileage(parseFloat(e.target.value)))
+                }
+>>>>>>> a9791f94cbab3e20b655a6349f1726f971a80212
               />
               <input
                 className="text-[0.9rem] px-3 text-left border placeholder:text-gray-600 border-gray-400 bg-white shadow-sm"
                 placeholder="Maximum Delivery Time"
                 type="number"
                 value={maximumAcceptableDeliveryTime}
+<<<<<<< HEAD
                 onChange={(e) => dispatch(updateMaximumAcceptableDeliveryTime(parseFloat(e.target.value)))}
+=======
+                onChange={(e) =>
+                  dispatch(
+                    updateMaximumAcceptableDeliveryTime(
+                      parseFloat(e.target.value)
+                    )
+                  )
+                }
+>>>>>>> a9791f94cbab3e20b655a6349f1726f971a80212
               />
               <input
                 className="text-[0.9rem] px-3 text-left border placeholder:text-gray-600 border-gray-400 bg-white shadow-sm"
                 placeholder="Logistics Provider Premium"
                 type="number"
                 value={logisticsProviderPremium}
+<<<<<<< HEAD
                 onChange={(e) => dispatch(updateLogisticsProviderPremium(parseFloat(e.target.value)))}
+=======
+                onChange={(e) =>
+                  dispatch(
+                    updateLogisticsProviderPremium(parseFloat(e.target.value))
+                  )
+                }
+>>>>>>> a9791f94cbab3e20b655a6349f1726f971a80212
               />
             </div>
             <div className="logistics-subtotal mt-4 flex justify-between items-center gap-1">

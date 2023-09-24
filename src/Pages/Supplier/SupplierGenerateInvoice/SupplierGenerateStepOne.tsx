@@ -9,7 +9,9 @@ import {
   updateWarehouseAddress,
 } from "../../../redux/supplierView/supplierToWarehouse";
 export default function SupplierGenerateStepOne() {
-  const { name, id, address } = useSelector((state: RootState) => state.supplier);
+  const { name, id, address } = useSelector(
+    (state: RootState) => state.supplier
+  );
 
   const dispatch = useDispatch();
   return (
@@ -28,7 +30,13 @@ export default function SupplierGenerateStepOne() {
           <div className="flex flex-col space-y-7">
             <div>
               <h1 className="mt-6 title text-2xl font-semibold">Step 1</h1>
+<<<<<<< HEAD
               <h3 className="subtitle text-[1rem] font-light">Enter Receiving Warehouse Details</h3>
+=======
+              <h3 className="subtitle text-[1rem] font-light">
+                Enter Receiving Warehouse Details
+              </h3>
+>>>>>>> a9791f94cbab3e20b655a6349f1726f971a80212
             </div>
             <div className="font-light flex flex-col space-y-4 justify-between items-start gap-1">
               {/* <div className="w-full flex flex-col space-y-3 items-start"> */}
@@ -58,7 +66,13 @@ export default function SupplierGenerateStepOne() {
                 placeholder="Ware Street Address"
                 type="text"
                 value={address}
+<<<<<<< HEAD
                 onChange={(e) => dispatch(updateWarehouseAddress(e.target.value))}
+=======
+                onChange={(e) =>
+                  dispatch(updateWarehouseAddress(e.target.value))
+                }
+>>>>>>> a9791f94cbab3e20b655a6349f1726f971a80212
               />
             </div>
           </div>
