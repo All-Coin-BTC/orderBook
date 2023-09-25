@@ -8,8 +8,8 @@ export default function SupplierCompleteInvoice() {
   return (
     <div className="flex flex-col justify-center items-center">
       <p>Your Order has been sent successfully.</p>
-      <Link to="/supplier-orders">
-        <button>View Orders</button>
+      <Link to="/supplier-hub">
+        <button>Return to Hub</button>
       </Link>
     </div>
   );
